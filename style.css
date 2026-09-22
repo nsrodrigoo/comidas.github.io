@@ -1,7 +1,38 @@
 /* =========================================================
-   NÚCLEO
-   STYLE.CSS
+   RESET
 ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    background: #dfe2e4;
+    color: #11100f;
+    font-family: "DM Sans", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font-family: inherit;
+}
 
 
 /* =========================================================
@@ -9,106 +40,38 @@
 ========================================================= */
 
 :root {
-
     --yellow: #ffd52f;
+    --yellow-dark: #f1c500;
 
-    --yellow-soft: #ffe477;
-
-    --ink: #11100f;
-
-    --muted: #68645f;
+    --black: #11100f;
+    --white: #fffdf8;
 
     --cream: #f7f2e9;
+    --gray: #68645f;
+    --light-gray: #e8e5df;
 
-    --paper: #fffdf8;
-
-    --line: rgba(17, 16, 15, .12);
-
-    --radius: 28px;
-
-    --shadow:
-        0 18px 50px rgba(17, 16, 15, .12);
-
+    --radius-small: 12px;
+    --radius-medium: 22px;
+    --radius-large: 30px;
 }
 
 
 /* =========================================================
-   RESET
-========================================================= */
-
-* {
-    box-sizing: border-box;
-}
-
-
-html {
-    scroll-behavior: smooth;
-}
-
-
-body {
-
-    margin: 0;
-
-    min-height: 100vh;
-
-    background: #dfe2e3;
-
-    color: var(--ink);
-
-    font-family:
-        "DM Sans",
-        Arial,
-        sans-serif;
-
-}
-
-
-a {
-
-    color: inherit;
-
-    text-decoration: none;
-
-}
-
-
-button,
-input {
-
-    font: inherit;
-
-}
-
-
-button {
-
-    cursor: pointer;
-
-}
-
-
-/* =========================================================
-   CONTAINER PRINCIPAL
+   ESTRUTURA PRINCIPAL
 ========================================================= */
 
 .app-shell {
-
     width: 100%;
-
-    max-width: 430px;
-
+    max-width: 480px;
     min-height: 100vh;
-
     margin: 0 auto;
-
-    background: var(--yellow);
-
     overflow: hidden;
+    background: var(--yellow);
+}
 
-    box-shadow:
-        0 0 70px rgba(0, 0, 0, .16);
-
+.page-pad {
+    padding-left: 21px;
+    padding-right: 21px;
 }
 
 
@@ -117,212 +80,139 @@ button {
 ========================================================= */
 
 .topbar {
+    position: relative;
+    z-index: 20;
 
-    position: sticky;
-
-    top: 0;
-
-    z-index: 100;
-
-    min-height: 72px;
-
-    padding: 0 20px;
+    width: 100%;
+    min-height: 70px;
 
     display: flex;
-
     align-items: center;
-
     justify-content: space-between;
 
-    background:
-        rgba(255, 253, 248, .96);
+    padding: 0 21px;
 
-    backdrop-filter:
-        blur(14px);
-
-    border-bottom:
-        1px solid var(--line);
-
+    background: var(--white);
 }
 
+
+/* LOGO */
 
 .brand {
-
     display: flex;
-
     align-items: center;
-
-    gap: 9px;
+    gap: 8px;
 
     font-size: 15px;
-
-    font-weight: 800;
-
-    letter-spacing: -.03em;
-
+    font-weight: 700;
 }
 
-
 .brand-mark {
-
-    width: 31px;
-
-    height: 31px;
+    width: 27px;
+    height: 27px;
 
     display: grid;
-
     place-items: center;
 
     border-radius: 50%;
 
-    background: var(--ink);
-
+    background: var(--black);
     color: var(--yellow);
 
-    font-family:
-        "Playfair Display",
-        Georgia,
-        serif;
-
-    font-size: 18px;
-
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 16px;
 }
 
+
+/* MENU DESKTOP */
 
 .nav {
-
     display: flex;
-
     align-items: center;
-
-    gap: 18px;
-
-    color: #686868;
-
-    font-size: 15px;
-
+    gap: 20px;
 }
-
 
 .nav a {
-
     position: relative;
 
-    padding: 25px 0;
+    color: #77736d;
 
-    white-space: nowrap;
+    font-size: 12px;
+    font-weight: 500;
 
+    transition: color .2s ease;
 }
 
+.nav a:hover {
+    color: var(--black);
+}
 
 .nav a.active {
-
-    color: var(--ink);
-
+    color: var(--black);
     font-weight: 700;
-
 }
 
-
 .nav a.active::after {
-
     content: "";
 
     position: absolute;
 
     left: 0;
-
     right: 0;
-
-    bottom: 17px;
+    bottom: -7px;
 
     height: 2px;
 
-    border-radius: 99px;
-
-    background: var(--ink);
-
+    background: var(--black);
 }
 
 
-.menu-toggle {
+/* BOTÃO MENU */
 
+.menu-toggle {
     display: none;
 
+    width: 38px;
+    height: 38px;
+
     border: 0;
+    border-radius: 50%;
 
-    background: transparent;
+    background: var(--black);
+    color: var(--white);
 
-    color: var(--ink);
+    font-size: 20px;
 
-    font-size: 24px;
-
-    line-height: 1;
-
+    cursor: pointer;
 }
 
 
 /* =========================================================
-   ELEMENTOS GERAIS
+   TEXTOS GERAIS
 ========================================================= */
 
-.page-pad {
-
-    padding-left: 22px;
-
-    padding-right: 22px;
-
-}
-
-
 .eyebrow {
-
-    display: inline-block;
+    display: block;
 
     margin-bottom: 13px;
 
-    color:
-        rgba(17, 16, 15, .58);
+    color: rgba(17, 16, 15, .65);
 
-    font-size: 10px;
-
+    font-size: 9px;
     font-weight: 800;
 
     letter-spacing: .13em;
-
     text-transform: uppercase;
-
 }
-
 
 h1,
 h2,
-h3,
+h3 {
+    font-family: "Playfair Display", Georgia, serif;
+}
+
 p {
-
-    margin-top: 0;
-
-}
-
-
-h1,
-h2 {
-
-    font-family:
-        "Playfair Display",
-        Georgia,
-        serif;
-
-    letter-spacing: -.055em;
-
-}
-
-
-h1 em,
-h2 em {
-
-    font-style: normal;
-
+    line-height: 1.5;
 }
 
 
@@ -331,79 +221,87 @@ h2 em {
 ========================================================= */
 
 .btn {
-
     min-height: 50px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
 
     padding: 0 18px;
 
-    display: inline-flex;
+    border-radius: 15px;
 
-    align-items: center;
-
-    justify-content: center;
-
-    gap: 22px;
-
-    border: 1px solid transparent;
-
-    border-radius: 14px;
-
-    font-size: 13px;
-
-    font-weight: 800;
+    font-size: 12px;
+    font-weight: 700;
 
     transition:
         transform .2s ease,
-        box-shadow .2s ease;
-
+        box-shadow .2s ease,
+        background .2s ease;
 }
-
 
 .btn:hover {
-
-    transform:
-        translateY(-2px);
-
+    transform: translateY(-2px);
 }
 
+.btn span {
+    font-size: 17px;
+    font-weight: 400;
+}
 
 .btn-dark {
-
-    background: var(--ink);
-
+    background: var(--black);
     color: white;
 
-    box-shadow:
-        0 8px 18px
-        rgba(17, 16, 15, .16);
-
+    box-shadow: 0 10px 22px rgba(0, 0, 0, .12);
 }
 
+.btn-dark:hover {
+    box-shadow: 0 13px 25px rgba(0, 0, 0, .18);
+}
 
 .btn-yellow {
-
     background: var(--yellow);
-
-    color: var(--ink);
-
+    color: var(--black);
 }
-
 
 .btn-small {
+    min-height: 43px;
 
-    min-height: 44px;
+    padding: 0 16px;
 
-    padding: 0 15px;
+    border-radius: 12px;
 
-    font-size: 12px;
+    font-size: 11px;
+}
 
+.btn.full {
+    width: 100%;
 }
 
 
-.full {
+/* LINK */
 
-    width: 100%;
+.text-link {
+    position: relative;
 
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.text-link::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    right: 0;
+    bottom: -5px;
+
+    height: 1px;
+
+    background: currentColor;
 }
 
 
@@ -412,366 +310,248 @@ h2 em {
 ========================================================= */
 
 .hero {
-
-    padding-top: 46px;
-
+    padding-top: 47px;
     padding-bottom: 34px;
-
 }
 
+.hero h1 {
+    max-width: 360px;
 
-.hero h1,
-.page-header h1,
-.science-hero h1 {
+    margin-bottom: 15px;
 
-    margin-bottom: 22px;
-
-    font-size: 62px;
-
-    line-height: .88;
-
+    font-size: clamp(52px, 14vw, 70px);
+    line-height: .84;
+    letter-spacing: -.055em;
 }
 
+.hero h1 em {
+    font-style: normal;
+}
 
-.hero p,
-.page-header p,
-.science-hero p {
-
+.hero p {
     max-width: 330px;
 
     margin-bottom: 25px;
 
-    color: #35322e;
+    color: rgba(17, 16, 15, .78);
 
-    font-size: 16px;
-
-    line-height: 1.45;
-
+    font-size: 15px;
+    line-height: 1.52;
 }
-
 
 .hero-actions {
-
     display: flex;
-
     align-items: center;
-
-    gap: 20px;
-
+    gap: 22px;
 }
 
-
-.text-link {
-
-    padding-bottom: 3px;
-
-    border-bottom:
-        1px solid var(--ink);
-
-    font-size: 13px;
-
-    font-weight: 800;
-
+.hero-actions .btn {
+    min-width: 185px;
 }
 
 
 /* =========================================================
-   IMAGENS
+   IMAGEM PRINCIPAL
 ========================================================= */
 
-.image-card {
-
-    position: relative;
-
-    overflow: hidden;
-
-    border-radius: var(--radius);
-
-    background: #ddd;
-
+.feature-image {
+    padding-bottom: 45px;
 }
 
-
-.image-card img,
-.menu-card > img,
-.recipe-hero img {
-
-    display: block;
+.image-card {
+    position: relative;
 
     width: 100%;
 
+    overflow: hidden;
+
+    border-radius: 29px;
+
+    background: #ddd;
+}
+
+.image-card.tall {
+    height: 410px;
+}
+
+.image-card img {
+    width: 100%;
     height: 100%;
 
     object-fit: cover;
-
 }
-
-
-.feature-image {
-
-    padding-bottom: 10px;
-
-}
-
-
-.feature-image .image-card {
-
-    height: 410px;
-
-}
-
 
 .image-overlay {
-
     position: absolute;
 
-    left: 18px;
+    left: 17px;
+    right: 17px;
+    bottom: 17px;
 
-    right: 18px;
-
-    bottom: 18px;
-
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 6px;
-
-    padding: 18px;
+    padding: 17px;
 
     border-radius: 20px;
 
-    background:
-        rgba(17, 16, 15, .82);
-
+    background: rgba(10, 10, 9, .79);
     color: white;
 
+    backdrop-filter: blur(8px);
 }
-
 
 .image-overlay span {
+    display: block;
 
-    font-size: 9px;
+    margin-bottom: 7px;
 
-    letter-spacing: .13em;
+    color: rgba(255, 255, 255, .6);
 
+    font-size: 8px;
+    font-weight: 800;
+
+    letter-spacing: .1em;
     text-transform: uppercase;
-
-    opacity: .65;
-
 }
 
-
 .image-overlay strong {
+    display: block;
 
-    font-family:
-        "Playfair Display",
-        Georgia,
-        serif;
+    font-family: "Playfair Display", Georgia, serif;
 
-    font-size: 29px;
-
-    line-height: .95;
-
+    font-size: 25px;
+    line-height: .98;
 }
 
 
 /* =========================================================
-   HOME — ESCOLHAS
+   SEÇÕES
 ========================================================= */
 
 .section {
-
-    padding-top: 44px;
-
-    padding-bottom: 44px;
-
-}
-
-
-.section-heading h2 {
-
-    margin-bottom: 18px;
-
-    font-size: 37px;
-
-}
-
-
-.choice-grid {
-
-    display: grid;
-
-    grid-template-columns:
-        1fr 1fr;
-
-    gap: 10px;
-
-}
-
-
-.choice-card {
-
-    position: relative;
-
-    min-height: 215px;
-
-    display: flex;
-
-    flex-direction: column;
-
-    justify-content: flex-end;
-
-    overflow: hidden;
-
-    padding: 18px;
-
-    border:
-        1px solid
-        rgba(17, 16, 15, .08);
-
-    border-radius: 23px;
-
-}
-
-
-.choice-card.yellow {
-
-    background: var(--yellow-soft);
-
-}
-
-
-.choice-card.cream {
+    padding-top: 45px;
+    padding-bottom: 45px;
 
     background: var(--cream);
-
 }
 
+.section-heading h2 {
+    margin-bottom: 25px;
 
-.choice-number {
-
-    position: absolute;
-
-    top: 17px;
-
-    left: 17px;
-
-    font-size: 10px;
-
-    font-weight: 800;
-
-    opacity: .5;
-
-}
-
-
-.choice-icon {
-
-    position: absolute;
-
-    top: 16px;
-
-    right: 16px;
-
-    font-family: serif;
-
-    font-size: 30px;
-
-}
-
-
-.choice-card strong {
-
-    font-family:
-        "Playfair Display",
-        Georgia,
-        serif;
-
-    font-size: 25px;
-
-    line-height: 1;
-
-}
-
-
-.choice-card small {
-
-    margin-top: 5px;
-
-    color: var(--muted);
-
-    font-size: 11px;
-
-}
-
-
-.choice-card .arrow {
-
-    position: absolute;
-
-    right: 16px;
-
-    bottom: 16px;
-
-    font-size: 18px;
-
+    font-size: 42px;
+    line-height: .92;
+    letter-spacing: -.04em;
 }
 
 
 /* =========================================================
-   FRASE
+   CARDS DE INFORMAÇÃO
 ========================================================= */
 
-.quote {
+.info-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
 
-    min-height: 220px;
+.info-card {
+    position: relative;
 
-    display: flex;
+    min-height: 190px;
 
-    flex-direction: column;
+    padding: 20px;
 
-    justify-content: center;
+    border-radius: 24px;
 
-    padding-top: 44px;
+    background: var(--white);
+}
 
-    padding-bottom: 48px;
+.info-number {
+    display: block;
 
-    background: var(--ink);
+    margin-bottom: 35px;
 
+    color: var(--gray);
+
+    font-size: 9px;
+    font-weight: 800;
+
+    opacity: .55;
+}
+
+.info-card h3 {
+    margin-bottom: 7px;
+
+    font-size: 28px;
+    line-height: 1;
+}
+
+.info-card p {
+    color: var(--gray);
+
+    font-size: 11px;
+    line-height: 1.45;
+}
+
+
+/* =========================================================
+   PREVIEW DO CARDÁPIO
+========================================================= */
+
+.menu-preview {
+    padding-top: 47px;
+    padding-bottom: 50px;
+
+    background: var(--black);
     color: white;
+}
 
+.menu-preview .eyebrow {
+    color: rgba(255, 255, 255, .5);
+}
+
+.menu-preview h2 {
+    margin-bottom: 16px;
+
+    font-size: 45px;
+    line-height: .9;
+    letter-spacing: -.04em;
+}
+
+.menu-preview p {
+    max-width: 290px;
+
+    margin-bottom: 24px;
+
+    color: #bdb9b2;
+
+    font-size: 13px;
+    line-height: 1.5;
 }
 
 
-.quote-mark {
+/* =========================================================
+   FRASES PARA PAINEL
+========================================================= */
 
-    color: var(--yellow);
+.panel-section {
+    padding-top: 43px;
+    padding-bottom: 43px;
 
-    font-family: Georgia, serif;
-
-    font-size: 70px;
-
-    line-height: .55;
-
+    background: var(--cream);
 }
 
+.panel-phrase {
+    margin-top: 12px;
 
-.quote p {
+    padding: 20px;
 
-    max-width: 330px;
+    border-radius: 20px;
 
-    margin: 8px 0 0;
+    background: var(--white);
 
-    font-family:
-        "Playfair Display",
-        Georgia,
-        serif;
+    font-family: "Playfair Display", Georgia, serif;
 
-    font-size: 29px;
-
-    line-height: 1.02;
-
+    font-size: 18px;
+    line-height: 1.18;
 }
 
 
@@ -780,623 +560,338 @@ h2 em {
 ========================================================= */
 
 .footer {
+    min-height: 85px;
 
     display: flex;
-
-    align-items: flex-end;
-
+    align-items: center;
     justify-content: space-between;
 
-    gap: 20px;
+    padding: 18px 21px;
 
-    padding: 22px;
-
-    background: var(--paper);
-
+    background: var(--black);
+    color: white;
 }
-
 
 .footer div {
-
     display: flex;
-
     flex-direction: column;
-
-    gap: 3px;
-
+    gap: 5px;
 }
-
 
 .footer strong {
-
-    font-size: 15px;
-
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 19px;
 }
 
+.footer span {
+    color: #88837c;
+    font-size: 8px;
+}
 
-.footer span,
-.footer a {
-
-    color: var(--muted);
-
+.footer > a {
     font-size: 10px;
-
-}
-
-
-.footer a {
-
-    color: var(--ink);
-
-    font-weight: 800;
-
+    font-weight: 700;
 }
 
 
 /* =========================================================
-   CARDÁPIO — HEADER
+   CABEÇALHO DE PÁGINAS
 ========================================================= */
 
 .page-header {
-
-    padding-top: 42px;
-
-    padding-bottom: 24px;
-
+    padding-top: 48px;
+    padding-bottom: 35px;
 }
-
 
 .page-header h1 {
+    margin-bottom: 17px;
 
-    font-size: 58px;
+    font-size: 57px;
+    line-height: .86;
+    letter-spacing: -.05em;
+}
 
+.page-header h1 em {
+    font-style: normal;
+}
+
+.page-header p {
+    max-width: 320px;
+
+    color: rgba(17, 16, 15, .72);
+
+    font-size: 13px;
+    line-height: 1.5;
 }
 
 
 /* =========================================================
-   BUSCA
-========================================================= */
-
-.filters {
-
-    padding-bottom: 22px;
-
-}
-
-
-.search-wrap {
-
-    height: 50px;
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 9px;
-
-    margin-bottom: 12px;
-
-    padding: 0 15px;
-
-    border:
-        1px solid
-        rgba(17, 16, 15, .09);
-
-    border-radius: 15px;
-
-    background:
-        rgba(255, 253, 248, .76);
-
-}
-
-
-.search-wrap span {
-
-    font-size: 22px;
-
-}
-
-
-.search-wrap input {
-
-    width: 100%;
-
-    border: 0;
-
-    outline: 0;
-
-    background: transparent;
-
-    color: var(--ink);
-
-    font-size: 14px;
-
-}
-
-
-.search-wrap input::placeholder {
-
-    color: #777;
-
-}
-
-
-.chips {
-
-    display: flex;
-
-    gap: 7px;
-
-    overflow-x: auto;
-
-    padding-bottom: 4px;
-
-    scrollbar-width: none;
-
-}
-
-
-.chips::-webkit-scrollbar {
-
-    display: none;
-
-}
-
-
-.chip {
-
-    padding: 9px 13px;
-
-    border:
-        1px solid
-        rgba(17, 16, 15, .17);
-
-    border-radius: 99px;
-
-    background: transparent;
-
-    color: var(--ink);
-
-    font-size: 11px;
-
-    white-space: nowrap;
-
-}
-
-
-.chip.active {
-
-    border-color: var(--ink);
-
-    background: var(--ink);
-
-    color: white;
-
-}
-
-
-/* =========================================================
-   CARDS DO CARDÁPIO
+   CARDÁPIO
 ========================================================= */
 
 .menu-list {
-
     display: flex;
-
     flex-direction: column;
+    gap: 22px;
 
-    gap: 16px;
-
-    padding-bottom: 38px;
-
+    padding-bottom: 30px;
 }
 
+
+/* CARD */
 
 .menu-card {
-
     overflow: hidden;
 
-    border-radius: 26px;
+    border-radius: 27px;
 
-    background: var(--paper);
+    background: var(--white);
 
-    box-shadow:
-        0 10px 35px
-        rgba(17, 16, 15, .08);
-
+    box-shadow: 0 12px 35px rgba(0, 0, 0, .08);
 }
-
 
 .menu-card > img {
+    width: 100%;
+    height: 245px;
 
-    height: 210px;
-
+    object-fit: cover;
 }
-
 
 .menu-card-body {
-
-    padding:
-        17px 17px 18px;
-
+    padding: 18px;
 }
 
+
+/* TOPO DO CARD */
 
 .card-top {
-
     display: flex;
-
     align-items: center;
-
     justify-content: space-between;
 
-    margin-bottom: 8px;
-
+    margin-bottom: 13px;
 }
 
-
 .tag {
-
     display: inline-flex;
+    align-items: center;
 
     padding: 6px 9px;
 
-    border-radius: 99px;
+    border-radius: 100px;
 
-    background: #ece7dd;
+    background: #eeeae2;
 
-    font-size: 9px;
+    color: #5f5b55;
 
+    font-size: 8px;
     font-weight: 800;
 
-    letter-spacing: .1em;
-
+    letter-spacing: .08em;
 }
-
 
 .price {
-
-    color: #999;
+    color: #a09c95;
 
     font-size: 10px;
-
     font-weight: 800;
-
 }
-
 
 .menu-card h2 {
+    margin-bottom: 7px;
 
-    margin:
-        4px 0 8px;
-
-    font-size: 31px;
-
+    font-size: 29px;
     line-height: 1;
-
 }
-
 
 .menu-card p {
+    margin-bottom: 17px;
 
-    margin-bottom: 15px;
+    color: var(--gray);
 
-    color: var(--muted);
-
-    font-size: 12px;
-
-    line-height: 1.45;
-
-}
-
-
-.empty-state {
-
-    display: none;
-
-    padding:
-        30px 20px 55px;
-
-    color: var(--muted);
-
-    font-size: 13px;
-
-    text-align: center;
-
-}
-
-
-.empty-state.show {
-
-    display: block;
-
+    font-size: 11px;
+    line-height: 1.5;
 }
 
 
 /* =========================================================
-   PÁGINA SOBRE
+   AVISO DO CARDÁPIO
+========================================================= */
+
+.menu-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+
+    padding-top: 10px;
+    padding-bottom: 43px;
+}
+
+.menu-note > span {
+    width: 38px;
+    height: 38px;
+
+    flex-shrink: 0;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: var(--black);
+    color: var(--yellow);
+
+    font-size: 19px;
+}
+
+.menu-note strong {
+    display: block;
+
+    margin-bottom: 4px;
+
+    font-size: 13px;
+}
+
+.menu-note p {
+    margin: 0;
+
+    color: var(--gray);
+
+    font-size: 11px;
+    line-height: 1.45;
+}
+
+
+/* =========================================================
+   PÁGINA "O QUE SÃO"
 ========================================================= */
 
 .science-hero {
-
-    position: relative;
-
-    padding-top: 42px;
-
-    padding-bottom: 20px;
-
+    padding-top: 48px;
+    padding-bottom: 35px;
 }
-
 
 .science-hero h1 {
+    margin-bottom: 18px;
 
-    font-size: 57px;
-
+    font-size: 60px;
+    line-height: .84;
+    letter-spacing: -.05em;
 }
 
+.science-hero h1 em {
+    font-style: normal;
+}
 
 .science-hero p {
+    max-width: 335px;
 
-    max-width: 350px;
-
-    margin-bottom: 0;
-
-}
-
-
-/* =========================================================
-   MOLÉCULA
-========================================================= */
-
-.molecule {
-
-    position: absolute;
-
-    top: 30px;
-
-    right: 25px;
-
-    width: 96px;
-
-    height: 96px;
-
-    border:
-        1px solid
-        rgba(17, 16, 15, .22);
-
-    border-radius: 50%;
-
-    opacity: .8;
-
-}
-
-
-.molecule::before,
-.molecule::after {
-
-    content: "";
-
-    position: absolute;
-
-    inset: 22px;
-
-    border:
-        1px solid
-        rgba(17, 16, 15, .28);
-
-    border-radius: 50%;
-
-    transform:
-        rotate(55deg);
-
-}
-
-
-.molecule::after {
-
-    transform:
-        rotate(-55deg);
-
-}
-
-
-.molecule span {
-
-    position: absolute;
-
-    width: 8px;
-
-    height: 8px;
-
-    border-radius: 50%;
-
-    background: var(--ink);
-
-}
-
-
-.molecule span:nth-child(1) {
-
-    top: 0;
-
-    left: 43px;
-
-}
-
-
-.molecule span:nth-child(2) {
-
-    top: 44px;
-
-    right: 0;
-
-}
-
-
-.molecule span:nth-child(3) {
-
-    bottom: 0;
-
-    left: 42px;
-
-}
-
-
-.molecule span:nth-child(4) {
-
-    top: 44px;
-
-    left: 0;
-
-}
-
-
-.molecule span:nth-child(5) {
-
-    top: 44px;
-
-    left: 44px;
-
-}
-
-
-/* =========================================================
-   FOTO SOBRE
-========================================================= */
-
-.science-photo {
-
-    padding-bottom: 34px;
-
-}
-
-
-.science-photo .image-card {
-
-    height: 300px;
-
-    border-radius: 25px;
-
-}
-
-
-/* =========================================================
-   DEFINIÇÃO
-========================================================= */
-
-.definition {
-
-    padding-top: 34px;
-
-    padding-bottom: 34px;
-
-    background: var(--cream);
-
-}
-
-
-.definition .number {
-
-    margin-bottom: 14px;
-
-    font-size: 10px;
-
-    font-weight: 800;
-
-}
-
-
-.definition h2 {
-
-    margin-bottom: 14px;
-
-    font-size: 35px;
-
-    line-height: .95;
-
-}
-
-
-.definition p {
-
-    margin-bottom: 0;
-
-    color: #514d48;
+    color: rgba(17, 16, 15, .78);
 
     font-size: 14px;
-
     line-height: 1.55;
+}
 
+
+/* FOTO */
+
+.science-photo {
+    padding-bottom: 40px;
+}
+
+.science-photo .image-card {
+    height: 350px;
+}
+
+.science-photo img {
+    object-position: center;
+}
+
+
+/* DEFINIÇÕES */
+
+.definition {
+    padding-top: 42px;
+    padding-bottom: 42px;
+
+    background: var(--white);
+}
+
+.definition .number {
+    margin-bottom: 20px;
+
+    color: #aaa49b;
+
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.definition h2 {
+    margin-bottom: 14px;
+
+    font-size: 52px;
+    line-height: .9;
+}
+
+.definition p {
+    color: var(--gray);
+
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.second-definition {
+    background: var(--yellow);
 }
 
 
 /* =========================================================
-   DNA / RNA
+   GRID DE FATOS
 ========================================================= */
 
 .fact-grid {
-
     display: grid;
-
-    grid-template-columns:
-        1fr 1fr;
-
+    grid-template-columns: 1fr 1fr;
     gap: 10px;
 
-    padding-top: 22px;
+    padding-top: 25px;
+    padding-bottom: 45px;
 
-    padding-bottom: 34px;
-
+    background: var(--yellow);
 }
-
 
 .fact-grid article {
+    min-height: 165px;
 
-    min-height: 170px;
+    padding: 17px;
 
-    padding: 18px;
+    border-radius: 20px;
 
-    border-radius: 21px;
-
-    background: var(--paper);
-
+    background: rgba(255, 255, 255, .5);
 }
-
 
 .fact-grid span {
+    display: block;
 
-    font-size: 10px;
+    margin-bottom: 30px;
 
+    font-size: 8px;
     font-weight: 800;
 
-    letter-spacing: .12em;
-
+    letter-spacing: .08em;
 }
-
 
 .fact-grid h3 {
+    margin-bottom: 5px;
 
-    margin:
-        26px 0 5px;
-
-    font-family:
-        "Playfair Display",
-        Georgia,
-        serif;
-
-    font-size: 24px;
-
+    font-size: 27px;
 }
 
-
 .fact-grid p {
+    color: rgba(17, 16, 15, .65);
 
-    color: var(--muted);
-
-    font-size: 11px;
-
-    line-height: 1.4;
-
+    font-size: 10px;
+    line-height: 1.45;
 }
 
 
@@ -1405,383 +900,632 @@ h2 em {
 ========================================================= */
 
 .cta-card {
+    padding-top: 45px;
+    padding-bottom: 45px;
 
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 20px;
-
-    padding-top: 30px;
-
-    padding-bottom: 30px;
-
-    background: var(--ink);
-
+    background: var(--black);
     color: white;
-
 }
-
 
 .cta-card .eyebrow {
-
-    color:
-        rgba(255, 255, 255, .5);
-
+    color: rgba(255, 255, 255, .5);
 }
-
 
 .cta-card h2 {
+    margin-bottom: 9px;
 
-    margin-bottom: 8px;
-
-    font-size: 37px;
-
+    font-size: 39px;
+    line-height: .95;
 }
 
-
 .cta-card p {
+    margin-bottom: 22px;
 
-    margin-bottom: 0;
+    color: #aaa59d;
 
-    color: #bbb;
-
-    font-size: 13px;
-
+    font-size: 12px;
 }
 
 
 /* =========================================================
-   RECEITA
+   PÁGINA DA RECEITA
 ========================================================= */
 
 .recipe-hero {
-
     position: relative;
 
-    height: 330px;
+    width: 100%;
+    height: 310px;
 
+    overflow: hidden;
 }
-
 
 .recipe-hero img {
-
+    width: 100%;
     height: 100%;
 
+    object-fit: cover;
 }
 
 
-.back-button {
+/* BOTÃO VOLTAR */
 
+.back-button {
     position: absolute;
 
-    top: 18px;
+    top: 17px;
+    left: 17px;
 
-    left: 18px;
-
-    width: 44px;
-
-    height: 44px;
+    width: 42px;
+    height: 42px;
 
     display: grid;
-
     place-items: center;
 
     border-radius: 50%;
 
-    background:
-        rgba(255, 253, 248, .9);
+    background: rgba(0, 0, 0, .65);
+    color: white;
 
     font-size: 20px;
 
-    font-weight: 800;
-
+    backdrop-filter: blur(5px);
 }
 
+
+/* CONTEÚDO */
 
 .recipe-content {
+    padding-top: 30px;
+    padding-bottom: 45px;
 
-    padding-top: 24px;
-
-    padding-bottom: 42px;
-
-    background: var(--paper);
-
+    background: var(--white);
 }
-
 
 .recipe-content h1 {
+    margin-bottom: 12px;
 
-    margin:
-        8px 0 12px;
-
-    font-size: 55px;
-
-    line-height: .9;
-
+    font-size: 53px;
+    line-height: .88;
+    letter-spacing: -.04em;
 }
 
+.recipe-content .lead {
+    margin-bottom: 23px;
 
-.lead {
+    color: var(--gray);
 
-    margin-bottom: 20px;
-
-    color: var(--muted);
-
-    font-size: 14px;
-
+    font-size: 13px;
     line-height: 1.55;
-
 }
 
 
 /* =========================================================
-   INFORMAÇÕES DA RECEITA
+   INFORMAÇÕES RÁPIDAS
 ========================================================= */
 
 .info-strip {
-
     display: grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
 
     margin-bottom: 28px;
-
-    padding: 13px 8px;
-
-    border-radius: 18px;
-
-    background: var(--cream);
-
 }
-
 
 .info-strip div {
+    min-height: 76px;
 
     display: flex;
-
     flex-direction: column;
+    justify-content: center;
 
-    gap: 3px;
+    padding: 12px;
 
-    padding:
-        0 8px;
+    border-radius: 16px;
 
-    border-right:
-        1px solid var(--line);
-
+    background: var(--cream);
 }
-
-
-.info-strip div:last-child {
-
-    border-right: 0;
-
-}
-
 
 .info-strip span {
+    margin-bottom: 5px;
 
-    color: #999;
+    color: #8b867e;
 
     font-size: 8px;
+    font-weight: 800;
 
-    letter-spacing: .1em;
-
+    letter-spacing: .06em;
     text-transform: uppercase;
-
 }
 
-
 .info-strip strong {
+    font-family: "Playfair Display", Georgia, serif;
 
-    font-size: 11px;
-
+    font-size: 16px;
 }
 
 
 /* =========================================================
-   INGREDIENTES / PREPARO
+   NUTRIÇÃO
+========================================================= */
+
+.nutrition-box {
+    margin-bottom: 30px;
+
+    padding: 18px;
+
+    border-radius: 21px;
+
+    background: var(--yellow);
+}
+
+.nutrition-box .eyebrow {
+    margin-bottom: 14px;
+}
+
+.nutrition-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+
+    margin-bottom: 13px;
+}
+
+.nutrition-grid div {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.nutrition-grid strong {
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 20px;
+}
+
+.nutrition-grid span {
+    color: rgba(17, 16, 15, .6);
+
+    font-size: 9px;
+
+    text-transform: uppercase;
+    letter-spacing: .05em;
+}
+
+.nutrition-box small {
+    display: block;
+
+    color: rgba(17, 16, 15, .6);
+
+    font-size: 9px;
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   SEÇÕES DA RECEITA
 ========================================================= */
 
 .recipe-section {
-
-    padding-bottom: 25px;
-
+    margin-bottom: 32px;
 }
-
 
 .recipe-section .eyebrow {
-
-    margin-bottom: 12px;
-
+    margin-bottom: 13px;
 }
 
 
-.recipe-section ul,
+/* LISTA INGREDIENTES */
+
+.recipe-section ul {
+    list-style: none;
+}
+
+.recipe-section ul li {
+    position: relative;
+
+    padding: 12px 0 12px 22px;
+
+    border-bottom: 1px solid #e8e4dc;
+
+    color: #4d4944;
+
+    font-size: 12px;
+    line-height: 1.45;
+}
+
+.recipe-section ul li::before {
+    content: "•";
+
+    position: absolute;
+
+    left: 3px;
+    top: 11px;
+
+    color: var(--black);
+
+    font-size: 18px;
+}
+
+
+/* PASSOS */
+
 .recipe-section ol {
+    list-style: none;
+
+    counter-reset: steps;
+}
+
+.recipe-section ol li {
+    position: relative;
+
+    min-height: 45px;
+
+    padding: 3px 0 15px 39px;
+
+    color: #4d4944;
+
+    font-size: 12px;
+    line-height: 1.5;
+
+    counter-increment: steps;
+}
+
+.recipe-section ol li::before {
+    content: counter(steps);
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 27px;
+    height: 27px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: var(--black);
+    color: var(--yellow);
+
+    font-size: 9px;
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   RELAÇÃO COM O TEMA
+========================================================= */
+
+.theme-box {
+    margin-bottom: 14px;
+
+    padding: 20px;
+
+    border-radius: 21px;
+
+    background: var(--cream);
+}
+
+.theme-box .eyebrow {
+    margin-bottom: 8px;
+}
+
+.theme-box p {
+    margin: 0;
+
+    color: #4e4a45;
+
+    font-size: 12px;
+    line-height: 1.55;
+}
+
+
+/* =========================================================
+   CUIDADOS
+========================================================= */
+
+.care-box {
+    margin-bottom: 25px;
+
+    padding: 20px;
+
+    border: 1px solid rgba(17, 16, 15, .1);
+    border-radius: 21px;
+
+    background: var(--white);
+}
+
+.care-box .eyebrow {
+    margin-bottom: 8px;
+}
+
+.care-box p {
+    margin: 0;
+
+    color: var(--gray);
+
+    font-size: 12px;
+    line-height: 1.55;
+}
+
+
+/* =========================================================
+   QR CODE
+========================================================= */
+
+.qr-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+
+    margin-bottom: 25px;
+    padding: 18px;
+
+    border-radius: 22px;
+
+    background: var(--black);
+    color: white;
+}
+
+.qr-box .eyebrow {
+    margin-bottom: 8px;
+
+    color: rgba(255, 255, 255, .5);
+}
+
+.qr-box h2 {
+    margin-bottom: 8px;
+
+    font-size: 23px;
+    line-height: 1;
+}
+
+.qr-box p {
+    max-width: 170px;
 
     margin: 0;
 
-    padding-left: 20px;
+    color: #aaa;
 
+    font-size: 10px;
+    line-height: 1.4;
+}
+
+.qr-box img {
+    width: 105px;
+    height: 105px;
+
+    flex-shrink: 0;
+
+    padding: 5px;
+
+    border-radius: 8px;
+
+    background: white;
 }
 
 
-.recipe-section li {
+/* =========================================================
+   RESPONSIVIDADE
+========================================================= */
 
-    padding: 8px 0;
+/*
+   O site foi pensado primeiro para celular.
+   Em telas maiores, mantemos o "formato celular"
+   centralizado, semelhante à referência.
+*/
 
-    border-bottom:
-        1px solid var(--line);
+@media (min-width: 481px) {
 
-    font-size: 13px;
+    body {
+        padding: 20px 0;
+    }
 
-    line-height: 1.5;
+    .app-shell {
+        border-radius: 30px;
 
-}
-
-
-.recipe-section li:last-child {
-
-    border-bottom: 0;
+        box-shadow:
+            0 20px 60px rgba(0, 0, 0, .15);
+    }
 
 }
 
 
 /* =========================================================
-   RESPONSIVO
+   CELULARES PEQUENOS
 ========================================================= */
 
 @media (max-width: 390px) {
 
-    .brand span:last-child {
-
-        display: none;
-
+    .page-pad {
+        padding-left: 18px;
+        padding-right: 18px;
     }
-
-
-    .menu-toggle {
-
-        display: block;
-
-    }
-
-
-    .nav {
-
-        position: absolute;
-
-        top: 65px;
-
-        right: 12px;
-
-        left: 12px;
-
-        display: none;
-
-        flex-direction: column;
-
-        gap: 0;
-
-        padding: 10px;
-
-        border-radius: 18px;
-
-        background: var(--paper);
-
-        box-shadow: var(--shadow);
-
-    }
-
-
-    .nav.open {
-
-        display: flex;
-
-    }
-
-
-    .nav a {
-
-        padding:
-            13px 14px;
-
-    }
-
-
-    .nav a.active::after {
-
-        display: none;
-
-    }
-
-}
-
-
-@media (max-width: 380px) {
-
-    .nav {
-
-        gap: 11px;
-
-        font-size: 13px;
-
-    }
-
-
-    .hero h1,
-    .page-header h1 {
-
-        font-size: 53px;
-
-    }
-
-
-    .science-hero h1 {
-
-        font-size: 50px;
-
-    }
-
-
-    .choice-card {
-
-        min-height: 190px;
-
-    }
-
-}
-
-
-@media (min-width: 700px) {
-
-    body {
-
-        padding:
-            24px 0;
-
-    }
-
-
-    .app-shell {
-
-        min-height:
-            calc(100vh - 48px);
-
-        border-radius: 36px;
-
-    }
-
 
     .topbar {
-
-        border-top-left-radius: 36px;
-
-        border-top-right-radius: 36px;
-
+        padding-left: 18px;
+        padding-right: 18px;
     }
 
+    .nav {
+        gap: 13px;
+    }
+
+    .nav a {
+        font-size: 10px;
+    }
+
+    .hero h1 {
+        font-size: 51px;
+    }
+
+    .hero p {
+        font-size: 13px;
+    }
+
+    .hero-actions {
+        gap: 15px;
+    }
+
+    .hero-actions .btn {
+        min-width: 165px;
+    }
+
+    .image-card.tall {
+        height: 380px;
+    }
+
+    .info-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .info-card {
+        min-height: 150px;
+    }
+
+    .page-header h1 {
+        font-size: 52px;
+    }
+
+    .science-hero h1 {
+        font-size: 54px;
+    }
+
+    .fact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .info-strip {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .info-strip div:last-child {
+        grid-column: span 2;
+    }
+
+    .qr-box {
+        align-items: flex-start;
+    }
+
+    .qr-box img {
+        width: 90px;
+        height: 90px;
+    }
+
+}
+
+
+/* =========================================================
+   CELULAR MUITO PEQUENO
+========================================================= */
+
+@media (max-width: 340px) {
+
+    .nav {
+        gap: 8px;
+    }
+
+    .nav a {
+        font-size: 9px;
+    }
+
+    .brand {
+        font-size: 13px;
+    }
+
+    .hero h1 {
+        font-size: 46px;
+    }
+
+    .hero-actions {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+    }
+
+    .text-link {
+        margin-left: 5px;
+    }
+
+    .recipe-content h1 {
+        font-size: 46px;
+    }
+
+    .qr-box {
+        flex-direction: column;
+    }
+
+    .qr-box img {
+        width: 120px;
+        height: 120px;
+    }
+
+}
+
+
+/* =========================================================
+   ACESSIBILIDADE
+========================================================= */
+
+a:focus-visible,
+button:focus-visible {
+    outline: 3px solid #222;
+    outline-offset: 3px;
+}
+
+
+/* =========================================================
+   ANIMAÇÕES
+========================================================= */
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(12px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+.hero,
+.feature-image,
+.section,
+.menu-list,
+.science-hero,
+.recipe-content {
+    animation: fadeUp .55s ease both;
+}
+
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #eeeae3;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #aaa49b;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #77716a;
 }
