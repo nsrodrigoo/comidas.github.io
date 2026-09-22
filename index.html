@@ -5,10 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Núcleo — Ciência no Prato</title>
-
-    <meta name="description"
-        content="Núcleo — um projeto que conecta alimentação, ciência e informação.">
+    <title>Ácido Nucleico | Núcleo</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,241 +14,254 @@
         href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
 
-    <main class="app-shell">
+<main class="app-shell">
 
-        <!-- ================= HEADER ================= -->
+    <!-- HEADER -->
 
-        <header class="topbar">
+    <header class="topbar">
 
-            <a href="index.html" class="brand">
-                <span class="brand-mark">N</span>
-                <span>Núcleo</span>
+        <a href="index.html" class="brand">
+            <span class="brand-mark">N</span>
+            <span>Núcleo</span>
+        </a>
+
+        <button
+            class="menu-toggle"
+            type="button"
+            aria-label="Abrir menu"
+            aria-expanded="false">
+            ☰
+        </button>
+
+        <nav class="nav">
+
+            <a href="index.html" class="active">
+                Home
             </a>
-
-            <button
-                class="menu-toggle"
-                type="button"
-                aria-label="Abrir menu"
-                aria-expanded="false">
-                ☰
-            </button>
-
-            <nav class="nav">
-
-                <a href="index.html" class="active">
-                    Home
-                </a>
-
-                <a href="cardapio.html">
-                    Cardápio
-                </a>
-
-                <a href="sobre.html">
-                    O que são
-                </a>
-
-            </nav>
-
-        </header>
-
-
-        <!-- ================= HERO ================= -->
-
-        <section class="hero page-pad">
-
-            <span class="eyebrow">
-                comer • entender • descobrir
-            </span>
-
-            <h1>
-                Ciência no
-                <br>
-                <em>prato.</em>
-            </h1>
-
-            <p>
-                Explore alimentos, receitas e pequenas descobertas
-                sobre o que acontece dentro do nosso corpo.
-            </p>
-
-            <div class="hero-actions">
-
-                <a
-                    href="cardapio.html"
-                    class="btn btn-dark">
-
-                    Explorar cardápio
-
-                    <span>→</span>
-
-                </a>
-
-                <a
-                    href="sobre.html"
-                    class="text-link">
-
-                    O que são?
-
-                </a>
-
-            </div>
-
-        </section>
-
-
-        <!-- ================= IMAGEM DESTAQUE ================= -->
-
-        <section class="feature-image page-pad">
-
-            <div class="image-card tall">
-
-                <img
-                    src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=900&q=85"
-                    alt="Bowl colorido com alimentos">
-
-                <div class="image-overlay">
-
-                    <span>
-                        01 / destaque
-                    </span>
-
-                    <strong>
-                        Moléculas
-                        <br>
-                        que alimentam.
-                    </strong>
-
-                </div>
-
-            </div>
-
-        </section>
-
-
-        <!-- ================= ESCOLHAS ================= -->
-
-        <section class="section page-pad">
-
-            <div class="section-heading">
-
-                <span class="eyebrow">
-                    comece por aqui
-                </span>
-
-                <h2>
-                    Escolha seu caminho
-                </h2>
-
-            </div>
-
-
-            <div class="choice-grid">
-
-                <a
-                    href="cardapio.html"
-                    class="choice-card yellow">
-
-                    <span class="choice-number">
-                        01
-                    </span>
-
-                    <span class="choice-icon">
-                        ◌
-                    </span>
-
-                    <strong>
-                        Cardápio
-                    </strong>
-
-                    <small>
-                        Receitas e sabores
-                    </small>
-
-                    <span class="arrow">
-                        ↗
-                    </span>
-
-                </a>
-
-
-                <a
-                    href="sobre.html"
-                    class="choice-card cream">
-
-                    <span class="choice-number">
-                        02
-                    </span>
-
-                    <span class="choice-icon">
-                        ⌬
-                    </span>
-
-                    <strong>
-                        O que são?
-                    </strong>
-
-                    <small>
-                        Ciência sem complicação
-                    </small>
-
-                    <span class="arrow">
-                        ↗
-                    </span>
-
-                </a>
-
-            </div>
-
-        </section>
-
-
-        <!-- ================= FRASE ================= -->
-
-        <section class="quote page-pad">
-
-            <span class="quote-mark">
-                “
-            </span>
-
-            <p>
-                Conhecer o alimento muda a forma como você olha para ele.
-            </p>
-
-        </section>
-
-
-        <!-- ================= FOOTER ================= -->
-
-        <footer class="footer">
-
-            <div>
-
-                <strong>
-                    Núcleo
-                </strong>
-
-                <span>
-                    informação que dá fome.
-                </span>
-
-            </div>
 
             <a href="cardapio.html">
-                Ver cardápio →
+                Cardápio
             </a>
 
-        </footer>
+            <a href="sobre.html">
+                O que são
+            </a>
 
-    </main>
+        </nav>
+
+    </header>
 
 
-    <script src="app.js"></script>
+    <!-- HERO -->
+
+    <section class="hero page-pad">
+
+        <span class="eyebrow">
+            tema do nosso projeto
+        </span>
+
+        <h1>
+            Ácido
+            <br>
+            <em>nucleico.</em>
+        </h1>
+
+        <p>
+            Uma macromolécula presente em todas as células vivas,
+            responsável por armazenar, transmitir e ajudar a utilizar
+            as informações genéticas.
+        </p>
+
+        <div class="hero-actions">
+
+            <a href="sobre.html" class="btn btn-dark">
+                Entenda o tema
+                <span>→</span>
+            </a>
+
+            <a href="cardapio.html" class="text-link">
+                Ver cardápio
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOTO PRINCIPAL -->
+
+    <section class="feature-image page-pad">
+
+        <div class="image-card tall">
+
+            <img
+                src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=900&q=85"
+                alt="Alimentos variados sobre uma mesa">
+
+            <div class="image-overlay">
+
+                <span>
+                    alimentação + ciência
+                </span>
+
+                <strong>
+                    O que comemos
+                    <br>
+                    também conta uma história.
+                </strong>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONEXÃO -->
+
+    <section class="section page-pad">
+
+        <div class="section-heading">
+
+            <span class="eyebrow">
+                entenda a ideia
+            </span>
+
+            <h2>
+                Do alimento
+                <br>
+                para a célula.
+            </h2>
+
+        </div>
+
+
+        <div class="info-cards">
+
+            <article class="info-card">
+
+                <span class="info-number">
+                    01
+                </span>
+
+                <h3>
+                    DNA
+                </h3>
+
+                <p>
+                    Guarda as informações genéticas que
+                    orientam o funcionamento das células.
+                </p>
+
+            </article>
+
+
+            <article class="info-card">
+
+                <span class="info-number">
+                    02
+                </span>
+
+                <h3>
+                    RNA
+                </h3>
+
+                <p>
+                    Participa da utilização dessas informações
+                    na produção de proteínas.
+                </p>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- CARDÁPIO CTA -->
+
+    <section class="menu-preview">
+
+        <div class="page-pad">
+
+            <span class="eyebrow">
+                café da tarde
+            </span>
+
+            <h2>
+                Agora vamos
+                <br>
+                para o prato?
+            </h2>
+
+            <p>
+                Conheça os quatro alimentos escolhidos
+                pelo nosso grupo.
+            </p>
+
+            <a href="cardapio.html" class="btn btn-yellow">
+                Conhecer o cardápio
+                <span>→</span>
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- FRASES PARA O PAINEL -->
+
+    <section class="panel-section page-pad">
+
+        <span class="eyebrow">
+            frases para o painel
+        </span>
+
+        <div class="panel-phrase">
+            "O DNA armazena as informações que ajudam
+            a determinar as características e o funcionamento
+            dos seres vivos."
+        </div>
+
+        <div class="panel-phrase">
+            "Alimentação e genética se encontram no funcionamento
+            das células e na utilização dos nutrientes."
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <div>
+
+            <strong>
+                Núcleo
+            </strong>
+
+            <span>
+                Ácido nucleico • Café da tarde
+            </span>
+
+        </div>
+
+        <a href="cardapio.html">
+            Cardápio →
+        </a>
+
+    </footer>
+
+</main>
+
+
+<script src="./app.js"></script>
 
 </body>
-
 </html>
