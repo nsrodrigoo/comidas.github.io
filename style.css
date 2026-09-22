@@ -37,11 +37,15 @@ img {
 }
 
 
+/* =========================================
+   CORES
+========================================= */
+
 :root {
     --yellow: #ffd52f;
     --black: #11100f;
     --white: #fffdf8;
-    --cream: #f1ede5;
+    --cream: #eeeae2;
     --gray: #68645e;
 }
 
@@ -64,7 +68,7 @@ img {
 
 
 /* =========================================
-   MENU SUPERIOR
+   MENU
 ========================================= */
 
 .topbar {
@@ -152,7 +156,7 @@ img {
 
 
 /* =========================================
-   ESPAÇAMENTO
+   ESPAÇAMENTO LATERAL
 ========================================= */
 
 .page-pad {
@@ -162,7 +166,7 @@ img {
 
 
 /* =========================================
-   TEXTOS
+   TEXTO PEQUENO
 ========================================= */
 
 .eyebrow {
@@ -193,6 +197,7 @@ h3 {
 
 .page-header {
     padding-top: 39px;
+
     padding-bottom: 34px;
 }
 
@@ -209,7 +214,7 @@ h3 {
 
 
 .page-header p {
-    max-width: 310px;
+    max-width: 315px;
 
     color: rgba(17, 16, 15, .78);
 
@@ -220,11 +225,12 @@ h3 {
 
 
 /* =========================================
-   LISTA
+   LISTA DOS PRATOS
 ========================================= */
 
 .menu-list {
     display: flex;
+
     flex-direction: column;
 
     gap: 13px;
@@ -247,11 +253,12 @@ h3 {
 
 
 /* =========================================
-   IMAGEM
+   IMAGEM DO CARD
 ========================================= */
 
 .menu-card > img {
     width: 100%;
+
     height: 157px;
 
     object-fit: cover;
@@ -259,29 +266,39 @@ h3 {
 
 
 /* =========================================
-   CONTEÚDO DO CARD
+   CORPO DO CARD
 ========================================= */
 
 .menu-card-body {
-    padding: 14px;
+    padding: 14px 14px 15px;
 }
 
 
 /* =========================================
-   ETIQUETA SUPERIOR
+   TOPO DO CARD
 ========================================= */
 
 .card-top {
+    width: 100%;
+
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
 
-    margin-bottom: 9px;
+    margin-bottom: 10px;
 }
 
 
+/* =========================================
+   ETIQUETA PRINCIPAL
+   ÁCIDO NUCLEICO
+========================================= */
+
 .tag {
     display: inline-flex;
+
     align-items: center;
 
     min-height: 25px;
@@ -290,15 +307,15 @@ h3 {
 
     border-radius: 50px;
 
-    background: #eeeae2;
+    background: var(--black);
 
-    color: #625e57;
+    color: var(--yellow);
 
     font-size: 7px;
 
     font-weight: 700;
 
-    letter-spacing: .08em;
+    letter-spacing: .07em;
 }
 
 
@@ -310,87 +327,88 @@ h3 {
 
 
 /* =========================================
-   TÍTULO DO PRATO
+   NOME DO PRATO
 ========================================= */
 
 .menu-card h2 {
     margin-bottom: 6px;
 
+    color: var(--black);
+
     font-size: 25px;
 
     line-height: 1;
+
+    letter-spacing: -.02em;
 }
 
 
+/* =========================================
+   DESCRIÇÃO
+========================================= */
+
 .menu-card p {
+    max-width: 430px;
+
     margin-bottom: 0;
 
     color: var(--gray);
 
     font-size: 9px;
 
-    line-height: 1.45;
+    line-height: 1.5;
 }
 
 
 /* =========================================
-   NUTRIENTES
+   OUTROS NUTRIENTES
 ========================================= */
 
-.nutrient-list {
+.nutrient-tags {
     display: flex;
+
     flex-wrap: wrap;
 
-    gap: 6px;
+    gap: 5px;
 
-    margin-top: 12px;
+    margin-top: 10px;
 
     margin-bottom: 14px;
 }
 
 
-.nutrient-list span {
+.nutrient-tags span {
     display: inline-flex;
+
     align-items: center;
 
-    min-height: 25px;
+    min-height: 23px;
 
-    padding: 0 10px;
+    padding: 0 8px;
 
     border-radius: 50px;
 
-    background: #eeeae2;
+    background: var(--cream);
 
     color: #625e57;
 
     font-size: 7px;
 
-    font-weight: 700;
-
-    letter-spacing: .05em;
+    font-weight: 600;
 }
 
 
 /* =========================================
-   ÁCIDO NUCLEICO
-========================================= */
-
-.nutrient-list .nutrient-highlight {
-    background: var(--black);
-
-    color: var(--yellow);
-}
-
-
-/* =========================================
-   BOTÃO
+   BOTÃO RECEITA
 ========================================= */
 
 .btn {
     min-height: 34px;
 
     display: inline-flex;
+
     align-items: center;
+
     justify-content: center;
 
     gap: 18px;
@@ -423,6 +441,7 @@ h3 {
 
 .menu-note {
     display: flex;
+
     align-items: flex-start;
 
     gap: 11px;
@@ -435,12 +454,15 @@ h3 {
 
 .menu-note > span {
     width: 30px;
+
     height: 30px;
 
     flex-shrink: 0;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     border-radius: 50%;
@@ -474,14 +496,16 @@ h3 {
 
 
 /* =========================================
-   FOOTER
+   RODAPÉ
 ========================================= */
 
 .footer {
     min-height: 67px;
 
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
 
     padding: 13px 19px;
@@ -518,7 +542,7 @@ h3 {
 
 
 /* =========================================
-   TELA MAIOR
+   DESKTOP / TELA GRANDE
 ========================================= */
 
 @media (min-width: 481px) {
@@ -544,6 +568,12 @@ h3 {
 
 @media (max-width: 360px) {
 
+    .topbar {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+
     .nav {
         gap: 11px;
     }
@@ -551,6 +581,12 @@ h3 {
 
     .nav a {
         font-size: 9px;
+    }
+
+
+    .page-pad {
+        padding-left: 16px;
+        padding-right: 16px;
     }
 
 
@@ -564,16 +600,16 @@ h3 {
     }
 
 
-    .nutrient-list {
-        gap: 5px;
+    .nutrient-tags {
+        gap: 4px;
     }
 
 
-    .nutrient-list span {
+    .nutrient-tags span {
         font-size: 6.5px;
 
-        padding-left: 8px;
-        padding-right: 8px;
+        padding-left: 7px;
+        padding-right: 7px;
     }
 
 }
