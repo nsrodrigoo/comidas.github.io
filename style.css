@@ -1,0 +1,275 @@
+/* ==============================
+   CONFIGURAÇÃO GERAL
+   ============================== */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f0f0f0;
+    color: #111;
+}
+
+/* ==============================
+   MENU
+   ============================== */
+
+.menu {
+    width: 100%;
+    height: 54px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+}
+
+.menu nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu a {
+    color: #222;
+    text-decoration: none;
+    font-size: 16px;
+    white-space: nowrap;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
+/* ==============================
+   ÁREA AMARELA
+   ============================== */
+
+main {
+    width: 100%;
+    max-width: 430px;
+    margin: 0 auto;
+    background: #ffd633;
+    min-height: 100vh;
+}
+
+/* ==============================
+   HOME
+   ============================== */
+
+.hero {
+    min-height: 640px;
+    padding: 28px 20px 35px;
+    text-align: center;
+}
+
+.hero h1,
+.cardapio h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-weight: 900;
+}
+
+.hero h1 {
+    font-size: 43px;
+    line-height: 0.98;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    max-width: 300px;
+    margin: 0 auto 18px;
+    font-size: 13px;
+    line-height: 1.2;
+}
+
+.hero-img {
+    width: 100%;
+    height: 310px;
+    object-fit: cover;
+    border-radius: 12px;
+    display: block;
+}
+
+.hero-button {
+    display: inline-block;
+    margin-top: -2px;
+    position: relative;
+    background: #fff;
+    color: #111;
+    text-decoration: none;
+    border-radius: 25px;
+    padding: 9px 27px;
+    font-size: 9px;
+    font-weight: bold;
+    line-height: 1.2;
+}
+
+/* ==============================
+   CARDÁPIO
+   ============================== */
+
+.cardapio {
+    padding: 38px 0 55px;
+}
+
+.cardapio h2 {
+    text-align: center;
+    font-size: 44px;
+    line-height: 1.05;
+    margin-bottom: 34px;
+}
+
+.card {
+    width: 78%;
+    margin: 0 auto 48px;
+    position: relative;
+}
+
+.card > img {
+    width: 100%;
+    height: 245px;
+    object-fit: cover;
+    display: block;
+    border-radius: 17px 17px 0 0;
+}
+
+.card-content {
+    background: #fff;
+    min-height: 120px;
+    padding: 25px 14px 38px;
+    border-radius: 0 0 17px 17px;
+    text-align: center;
+}
+
+.card-content h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.card-content p {
+    font-size: 14px;
+    line-height: 1.25;
+}
+
+.recipe-button {
+    position: absolute;
+    bottom: -33px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 142px;
+    height: 43px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #050505;
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* ==============================
+   O QUE SÃO
+   ============================== */
+
+.info {
+    background: #fff;
+    padding: 42px 28px;
+}
+
+.info h2,
+.recipe h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 35px;
+    margin-bottom: 18px;
+}
+
+.info p {
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+/* ==============================
+   RECEITAS
+   ============================== */
+
+.receitas {
+    background: #ffd633;
+    padding: 35px 20px 60px;
+}
+
+.recipe {
+    background: #fff;
+    border-radius: 16px;
+    padding: 25px 20px;
+    margin-bottom: 25px;
+    scroll-margin-top: 70px;
+}
+
+.recipe h3 {
+    font-size: 18px;
+    margin: 20px 0 8px;
+}
+
+.recipe p,
+.recipe li {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.recipe ul,
+.recipe ol {
+    padding-left: 20px;
+}
+
+/* ==============================
+   CELULARES MENORES
+   ============================== */
+
+@media (max-width: 360px) {
+
+    .menu {
+        height: 48px;
+    }
+
+    .menu a {
+        font-size: 13px;
+    }
+
+    .hero {
+        padding: 22px 14px 30px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+    }
+
+    .hero-img {
+        height: 235px;
+    }
+
+    .cardapio h2 {
+        font-size: 37px;
+    }
+
+    .card {
+        width: 78%;
+    }
+
+    .card > img {
+        height: 205px;
+    }
+}
