@@ -51,7 +51,7 @@ img {
 
 
 /* =========================================
-   APLICAÇÃO
+   CONTAINER PRINCIPAL
 ========================================= */
 
 .app-shell {
@@ -68,7 +68,7 @@ img {
 
 
 /* =========================================
-   MENU
+   MENU SUPERIOR
 ========================================= */
 
 .topbar {
@@ -156,7 +156,7 @@ img {
 
 
 /* =========================================
-   ESPAÇAMENTO LATERAL
+   ESPAÇAMENTO
 ========================================= */
 
 .page-pad {
@@ -166,7 +166,7 @@ img {
 
 
 /* =========================================
-   TEXTO PEQUENO
+   CABEÇALHO
 ========================================= */
 
 .eyebrow {
@@ -174,13 +174,13 @@ img {
 
     margin-bottom: 12px;
 
-    color: rgba(17, 16, 15, .65);
+    color: rgba(17, 16, 15, 0.65);
 
     font-size: 8px;
 
     font-weight: 700;
 
-    letter-spacing: .13em;
+    letter-spacing: 0.13em;
 }
 
 
@@ -190,10 +190,6 @@ h3 {
     font-family: "Playfair Display", Georgia, serif;
 }
 
-
-/* =========================================
-   CABEÇALHO
-========================================= */
 
 .page-header {
     padding-top: 39px;
@@ -207,16 +203,16 @@ h3 {
 
     font-size: 49px;
 
-    line-height: .84;
+    line-height: 0.84;
 
-    letter-spacing: -.05em;
+    letter-spacing: -0.05em;
 }
 
 
 .page-header p {
     max-width: 315px;
 
-    color: rgba(17, 16, 15, .78);
+    color: rgba(17, 16, 15, 0.78);
 
     font-size: 12px;
 
@@ -253,7 +249,7 @@ h3 {
 
 
 /* =========================================
-   IMAGEM DO CARD
+   IMAGEM
 ========================================= */
 
 .menu-card > img {
@@ -266,7 +262,7 @@ h3 {
 
 
 /* =========================================
-   CORPO DO CARD
+   CONTEÚDO
 ========================================= */
 
 .menu-card-body {
@@ -292,7 +288,6 @@ h3 {
 
 
 /* =========================================
-   ETIQUETA PRINCIPAL
    ÁCIDO NUCLEICO
 ========================================= */
 
@@ -315,9 +310,13 @@ h3 {
 
     font-weight: 700;
 
-    letter-spacing: .07em;
+    letter-spacing: 0.07em;
 }
 
+
+/* =========================================
+   NÚMERO DO PRATO
+========================================= */
 
 .price {
     color: #99938b;
@@ -339,7 +338,7 @@ h3 {
 
     line-height: 1;
 
-    letter-spacing: -.02em;
+    letter-spacing: -0.02em;
 }
 
 
@@ -361,7 +360,7 @@ h3 {
 
 
 /* =========================================
-   OUTROS NUTRIENTES
+   NUTRIENTES SECUNDÁRIOS
 ========================================= */
 
 .nutrient-tags {
@@ -399,7 +398,7 @@ h3 {
 
 
 /* =========================================
-   BOTÃO RECEITA
+   BOTÃO
 ========================================= */
 
 .btn {
@@ -436,7 +435,7 @@ h3 {
 
 
 /* =========================================
-   EXPLICAÇÃO
+   EXPLICAÇÃO DO ÁCIDO NUCLEICO
 ========================================= */
 
 .menu-note {
@@ -454,7 +453,6 @@ h3 {
 
 .menu-note > span {
     width: 30px;
-
     height: 30px;
 
     flex-shrink: 0;
@@ -487,7 +485,7 @@ h3 {
 
 
 .menu-note p {
-    color: rgba(17, 16, 15, .68);
+    color: rgba(17, 16, 15, 0.68);
 
     font-size: 9px;
 
@@ -542,7 +540,7 @@ h3 {
 
 
 /* =========================================
-   DESKTOP / TELA GRANDE
+   TELA MAIOR
 ========================================= */
 
 @media (min-width: 481px) {
@@ -556,7 +554,7 @@ h3 {
         border-radius: 28px;
 
         box-shadow:
-            0 15px 50px rgba(0, 0, 0, .15);
+            0 15px 50px rgba(0, 0, 0, 0.15);
     }
 
 }
