@@ -14,9 +14,16 @@ html {
 
 body {
     min-height: 100vh;
+
     background: #dfe2e4;
+
     color: #11100f;
-    font-family: "DM Sans", Arial, sans-serif;
+
+    font-family:
+        "DM Sans",
+        Arial,
+        sans-serif;
+
     -webkit-font-smoothing: antialiased;
 }
 
@@ -36,25 +43,40 @@ img {
 ========================================================= */
 
 :root {
+
     --yellow: #ffd52f;
+
     --black: #11100f;
+
     --white: #fffdf8;
+
     --cream: #f2eee6;
+
     --gray: #68645e;
+
+    --gray-light: #9b958d;
+
 }
 
 
 /* =========================================================
-   APLICAÇÃO
+   CONTAINER
 ========================================================= */
 
 .app-shell {
+
     width: 100%;
+
     max-width: 480px;
+
     min-height: 100vh;
+
     margin: 0 auto;
+
     overflow: hidden;
+
     background: var(--yellow);
+
 }
 
 
@@ -63,8 +85,11 @@ img {
 ========================================================= */
 
 .page-pad {
-    padding-left: 21px;
-    padding-right: 21px;
+
+    padding-left: 20px;
+
+    padding-right: 20px;
+
 }
 
 
@@ -73,77 +98,141 @@ img {
 ========================================================= */
 
 .topbar {
+
     position: relative;
+
     z-index: 20;
 
     height: 54px;
 
-    padding: 0 21px;
+    padding: 0 20px;
 
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
 
     background: var(--white);
+
 }
+
+
+/* =========================================================
+   LOGO
+========================================================= */
 
 .brand {
-    display: flex;
-    align-items: center;
-    gap: 7px;
 
-    font-size: 11px;
-    font-weight: 700;
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+
+    min-width: 0;
+
 }
 
-.brand-mark {
-    width: 25px;
-    height: 25px;
+
+.brand-logo {
+
+    width: 27px;
+
+    height: 27px;
+
+    flex-shrink: 0;
 
     display: grid;
+
     place-items: center;
 
     border-radius: 50%;
 
     background: var(--black);
+
     color: var(--yellow);
 
-    font-family: Georgia, serif;
-    font-size: 13px;
 }
+
+
+.brand-logo svg {
+
+    width: 21px;
+
+    height: 21px;
+
+}
+
+
+.brand-name {
+
+    color: var(--black);
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: .03em;
+
+    white-space: nowrap;
+
+}
+
+
+/* =========================================================
+   NAVEGAÇÃO
+========================================================= */
 
 .nav {
+
     display: flex;
+
     align-items: center;
-    gap: 18px;
+
+    gap: 17px;
+
 }
 
+
 .nav a {
+
     position: relative;
 
     color: #77736d;
 
     font-size: 10px;
+
     font-weight: 500;
+
 }
+
 
 .nav a.active {
+
     color: var(--black);
+
     font-weight: 700;
+
 }
 
+
 .nav a.active::after {
+
     content: "";
 
     position: absolute;
 
     left: 0;
+
     right: 0;
+
     bottom: -8px;
 
     height: 2px;
 
     background: var(--black);
+
 }
 
 
@@ -154,20 +243,31 @@ img {
 h1,
 h2,
 h3 {
-    font-family: "Playfair Display", Georgia, serif;
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
+
 }
 
+
 .eyebrow {
+
     display: block;
 
-    margin-bottom: 13px;
+    margin-bottom: 12px;
 
     color: rgba(17, 16, 15, .62);
 
     font-size: 8px;
-    font-weight: 700;
+
+    font-weight: 800;
 
     letter-spacing: .13em;
+
+    text-transform: uppercase;
+
 }
 
 
@@ -176,10 +276,13 @@ h3 {
 ========================================================= */
 
 .btn {
-    min-height: 42px;
+
+    min-height: 40px;
 
     display: inline-flex;
+
     align-items: center;
+
     justify-content: center;
 
     gap: 18px;
@@ -189,30 +292,54 @@ h3 {
     border-radius: 12px;
 
     font-size: 9px;
+
     font-weight: 700;
+
 }
+
 
 .btn-dark {
+
     background: var(--black);
+
     color: white;
+
 }
+
 
 .btn-yellow {
+
     background: var(--yellow);
+
     color: var(--black);
+
 }
+
 
 .btn span {
+
     font-size: 13px;
+
 }
 
+
+.btn.full {
+
+    width: 100%;
+
+}
+
+
 .text-link {
-    font-size: 11px;
-    font-weight: 700;
+
+    padding-bottom: 4px;
 
     border-bottom: 1px solid var(--black);
 
-    padding-bottom: 4px;
+    font-size: 10px;
+
+    font-weight: 700;
+
 }
 
 
@@ -221,116 +348,158 @@ h3 {
 ========================================================= */
 
 .hero {
-    padding-top: 48px;
-    padding-bottom: 34px;
+
+    padding-top: 47px;
+
+    padding-bottom: 36px;
+
 }
 
+
 .hero h1 {
-    max-width: 360px;
 
     margin-bottom: 17px;
 
-    font-size: 60px;
+    font-size: 61px;
 
-    line-height: .84;
+    line-height: .83;
 
     letter-spacing: -.055em;
+
 }
+
 
 .hero h1 em {
+
     font-style: normal;
+
 }
 
+
 .hero p {
-    max-width: 350px;
+
+    max-width: 340px;
 
     margin-bottom: 24px;
 
-    color: rgba(17, 16, 15, .8);
+    color: rgba(17, 16, 15, .79);
 
-    font-size: 14px;
+    font-size: 13px;
 
-    line-height: 1.48;
+    line-height: 1.5;
+
 }
+
 
 .hero-actions {
+
     display: flex;
+
     align-items: center;
-    gap: 20px;
+
+    gap: 19px;
+
 }
 
+
 .hero-actions .btn {
+
     min-width: 145px;
+
 }
 
 
 /* =========================================================
-   HOME — IMAGEM PRINCIPAL
+   HOME — IMAGEM
 ========================================================= */
 
 .feature-image {
-    padding-bottom: 42px;
+
+    padding-bottom: 43px;
+
 }
 
-.image-card {
-    position: relative;
 
-    width: 100%;
+.image-card {
+
+    position: relative;
 
     overflow: hidden;
 
-    border-radius: 27px;
+    border-radius: 28px;
+
 }
+
 
 .image-card.tall {
-    height: 400px;
+
+    height: 405px;
+
 }
 
+
 .image-card img {
+
     width: 100%;
+
     height: 100%;
 
     object-fit: cover;
+
 }
 
+
 .image-overlay {
+
     position: absolute;
 
     left: 16px;
+
     right: 16px;
+
     bottom: 16px;
 
     padding: 17px;
 
     border-radius: 19px;
 
-    background: rgba(10, 10, 10, .78);
+    background: rgba(10, 10, 10, .79);
 
     color: white;
+
 }
 
+
 .image-overlay span {
+
     display: block;
 
     margin-bottom: 7px;
 
-    color: rgba(255, 255, 255, .6);
+    color: rgba(255, 255, 255, .58);
 
     font-size: 8px;
+
     font-weight: 700;
 
-    text-transform: uppercase;
     letter-spacing: .1em;
+
+    text-transform: uppercase;
+
 }
 
+
 .image-overlay strong {
-    display: block;
 
-    font-family: "Playfair Display", Georgia, serif;
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
 
-    font-size: 26px;
+    font-size: 25px;
 
     line-height: .96;
+
 }
 
 
@@ -339,33 +508,46 @@ h3 {
 ========================================================= */
 
 .section {
+
     padding-top: 43px;
+
     padding-bottom: 43px;
 
     background: var(--cream);
+
 }
 
-.section-heading h2 {
+
+.section-title {
+
     margin-bottom: 24px;
 
-    font-size: 39px;
+    font-size: 40px;
 
-    line-height: .92;
+    line-height: .91;
+
+    letter-spacing: -.04em;
+
 }
 
 
 /* =========================================================
-   HOME — CARDS DNA/RNA
+   HOME — DNA / RNA
 ========================================================= */
 
 .info-cards {
+
     display: grid;
+
     grid-template-columns: 1fr 1fr;
 
     gap: 10px;
+
 }
 
+
 .info-card {
+
     min-height: 175px;
 
     padding: 18px;
@@ -373,63 +555,85 @@ h3 {
     border-radius: 21px;
 
     background: var(--white);
+
 }
 
+
 .info-number {
+
     display: block;
 
-    margin-bottom: 28px;
+    margin-bottom: 27px;
 
     color: #99938b;
 
     font-size: 8px;
+
     font-weight: 700;
+
 }
 
+
 .info-card h3 {
+
     margin-bottom: 7px;
 
     font-size: 25px;
 
     line-height: 1;
+
 }
 
+
 .info-card p {
+
     color: var(--gray);
 
     font-size: 10px;
 
     line-height: 1.45;
+
 }
 
 
 /* =========================================================
-   HOME — CTA
+   HOME — MENU PREVIEW
 ========================================================= */
 
 .menu-preview {
+
     padding-top: 44px;
+
     padding-bottom: 46px;
 
     background: var(--black);
 
     color: white;
+
 }
+
 
 .menu-preview .eyebrow {
-    color: rgba(255, 255, 255, .5);
+
+    color: rgba(255, 255, 255, .48);
+
 }
+
 
 .menu-preview h2 {
+
     margin-bottom: 14px;
 
-    font-size: 39px;
+    font-size: 40px;
 
     line-height: .9;
+
 }
 
+
 .menu-preview p {
-    max-width: 285px;
+
+    max-width: 290px;
 
     margin-bottom: 22px;
 
@@ -438,21 +642,27 @@ h3 {
     font-size: 12px;
 
     line-height: 1.5;
+
 }
 
 
 /* =========================================================
-   FRASES DO PAINEL
+   HOME — FRASES
 ========================================================= */
 
 .panel-section {
+
     padding-top: 40px;
+
     padding-bottom: 40px;
 
     background: var(--cream);
+
 }
 
+
 .panel-phrase {
+
     margin-top: 11px;
 
     padding: 18px;
@@ -461,11 +671,15 @@ h3 {
 
     background: var(--white);
 
-    font-family: "Playfair Display", Georgia, serif;
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
 
     font-size: 17px;
 
     line-height: 1.17;
+
 }
 
 
@@ -474,11 +688,16 @@ h3 {
 ========================================================= */
 
 .page-header {
+
     padding-top: 40px;
+
     padding-bottom: 34px;
+
 }
 
+
 .page-header h1 {
+
     margin-bottom: 17px;
 
     font-size: 54px;
@@ -486,9 +705,12 @@ h3 {
     line-height: .84;
 
     letter-spacing: -.05em;
+
 }
 
+
 .page-header p {
+
     max-width: 315px;
 
     color: rgba(17, 16, 15, .76);
@@ -496,45 +718,57 @@ h3 {
     font-size: 12px;
 
     line-height: 1.5;
+
 }
 
 
 /* =========================================================
-   LISTA DO CARDÁPIO
+   LISTA DOS PRATOS
 ========================================================= */
 
 .menu-list {
+
     display: flex;
 
     flex-direction: column;
 
     gap: 14px;
 
-    padding-bottom: 26px;
+    padding-bottom: 27px;
+
 }
 
 
 /* =========================================================
-   CARD DO PRATO
+   CARD
 ========================================================= */
 
 .menu-card {
+
     overflow: hidden;
 
     border-radius: 22px;
 
     background: var(--white);
+
 }
 
+
 .menu-card > img {
+
     width: 100%;
+
     height: 170px;
 
     object-fit: cover;
+
 }
 
+
 .menu-card-body {
+
     padding: 14px;
+
 }
 
 
@@ -543,11 +777,15 @@ h3 {
 ========================================================= */
 
 .card-top {
+
     display: flex;
+
     align-items: center;
+
     justify-content: space-between;
 
-    margin-bottom: 9px;
+    margin-bottom: 10px;
+
 }
 
 
@@ -556,6 +794,7 @@ h3 {
 ========================================================= */
 
 .tag {
+
     display: inline-flex;
 
     align-items: center;
@@ -572,9 +811,10 @@ h3 {
 
     font-size: 7px;
 
-    font-weight: 700;
+    font-weight: 800;
 
     letter-spacing: .06em;
+
 }
 
 
@@ -583,9 +823,11 @@ h3 {
 ========================================================= */
 
 .price {
+
     color: #aaa49c;
 
     font-size: 8px;
+
 }
 
 
@@ -594,29 +836,33 @@ h3 {
 ========================================================= */
 
 .menu-card h2 {
+
     margin-bottom: 6px;
 
     font-size: 27px;
 
     line-height: 1;
+
 }
 
+
 .menu-card p {
-    margin-bottom: 0;
 
     color: var(--gray);
 
     font-size: 9px;
 
     line-height: 1.5;
+
 }
 
 
 /* =========================================================
-   OUTROS NUTRIENTES
+   ETIQUETAS DOS NUTRIENTES
 ========================================================= */
 
 .nutrient-tags {
+
     display: flex;
 
     flex-wrap: wrap;
@@ -626,9 +872,12 @@ h3 {
     margin-top: 11px;
 
     margin-bottom: 14px;
+
 }
 
+
 .nutrient-tags span {
+
     display: inline-flex;
 
     align-items: center;
@@ -648,14 +897,16 @@ h3 {
     font-weight: 600;
 
     white-space: nowrap;
+
 }
 
 
 /* =========================================================
-   AVISO SOBRE ÁCIDO NUCLEICO
+   NOTA DO CARDÁPIO
 ========================================================= */
 
 .menu-note {
+
     display: flex;
 
     align-items: flex-start;
@@ -665,15 +916,20 @@ h3 {
     padding-top: 5px;
 
     padding-bottom: 34px;
+
 }
 
-.menu-note > span {
-    width: 30px;
-    height: 30px;
+
+.note-icon {
+
+    width: 31px;
+
+    height: 31px;
 
     flex-shrink: 0;
 
     display: grid;
+
     place-items: center;
 
     border-radius: 50%;
@@ -682,27 +938,32 @@ h3 {
 
     color: var(--yellow);
 
-    font-family: Georgia, serif;
+    font-size: 7px;
 
-    font-size: 12px;
+    font-weight: 800;
+
 }
 
+
 .menu-note strong {
+
     display: block;
 
     margin-bottom: 4px;
 
     font-size: 10px;
+
 }
 
+
 .menu-note p {
-    margin: 0;
 
     color: rgba(17, 16, 15, .67);
 
     font-size: 9px;
 
     line-height: 1.5;
+
 }
 
 
@@ -711,11 +972,16 @@ h3 {
 ========================================================= */
 
 .science-hero {
+
     padding-top: 43px;
+
     padding-bottom: 34px;
+
 }
 
+
 .science-hero h1 {
+
     margin-bottom: 16px;
 
     font-size: 58px;
@@ -723,13 +989,19 @@ h3 {
     line-height: .84;
 
     letter-spacing: -.05em;
+
 }
+
 
 .science-hero h1 em {
+
     font-style: normal;
+
 }
 
+
 .science-hero p {
+
     max-width: 340px;
 
     color: rgba(17, 16, 15, .78);
@@ -737,24 +1009,28 @@ h3 {
     font-size: 13px;
 
     line-height: 1.55;
+
 }
+
 
 .science-photo {
+
     padding-bottom: 38px;
+
 }
+
 
 .science-photo .image-card {
+
     height: 320px;
+
 }
 
-.definition {
-    padding-top: 38px;
-    padding-bottom: 38px;
 
-    background: var(--white);
-}
+.section-index {
 
-.definition .number {
+    display: block;
+
     margin-bottom: 17px;
 
     color: #99938b;
@@ -762,34 +1038,56 @@ h3 {
     font-size: 9px;
 
     font-weight: 700;
+
 }
 
+
+.definition {
+
+    padding-top: 38px;
+
+    padding-bottom: 38px;
+
+    background: var(--white);
+
+}
+
+
 .definition h2 {
+
     margin-bottom: 13px;
 
     font-size: 44px;
 
     line-height: .9;
+
 }
 
+
 .definition p {
+
     color: var(--gray);
 
     font-size: 12px;
 
     line-height: 1.58;
+
 }
 
+
 .second-definition {
+
     background: var(--yellow);
+
 }
 
 
 /* =========================================================
-   FATOS SOBRE DNA/RNA
+   FATOS
 ========================================================= */
 
 .fact-grid {
+
     display: grid;
 
     grid-template-columns: 1fr 1fr;
@@ -797,12 +1095,16 @@ h3 {
     gap: 10px;
 
     padding-top: 23px;
+
     padding-bottom: 36px;
 
     background: var(--yellow);
+
 }
 
+
 .fact-grid article {
+
     min-height: 155px;
 
     padding: 17px;
@@ -810,9 +1112,12 @@ h3 {
     border-radius: 20px;
 
     background: rgba(255, 255, 255, .55);
+
 }
 
-.fact-grid span {
+
+.fact-grid article > span {
+
     display: block;
 
     margin-bottom: 26px;
@@ -822,54 +1127,73 @@ h3 {
     font-weight: 700;
 
     letter-spacing: .06em;
+
 }
 
+
 .fact-grid h3 {
+
     margin-bottom: 5px;
 
     font-size: 25px;
+
 }
 
+
 .fact-grid p {
+
     color: rgba(17, 16, 15, .65);
 
     font-size: 10px;
 
     line-height: 1.45;
+
 }
 
 
 /* =========================================================
-   CTA FINAL
+   CTA
 ========================================================= */
 
 .cta-card {
+
     padding-top: 40px;
+
     padding-bottom: 40px;
 
     background: var(--black);
 
     color: white;
+
 }
+
 
 .cta-card .eyebrow {
+
     color: rgba(255, 255, 255, .5);
+
 }
 
+
 .cta-card h2 {
-    margin-bottom: 9px;
+
+    margin-bottom: 10px;
 
     font-size: 39px;
 
     line-height: .92;
+
 }
 
+
 .cta-card p {
+
     margin-bottom: 20px;
 
     color: #aaa59d;
 
     font-size: 11px;
+
 }
 
 
@@ -878,30 +1202,41 @@ h3 {
 ========================================================= */
 
 .recipe-hero {
+
     position: relative;
 
-    height: 300px;
+    height: 290px;
 
     overflow: hidden;
+
 }
 
+
 .recipe-hero img {
+
     width: 100%;
+
     height: 100%;
 
     object-fit: cover;
+
 }
 
+
 .back-button {
+
     position: absolute;
 
-    top: 17px;
-    left: 17px;
+    top: 16px;
+
+    left: 16px;
 
     width: 42px;
+
     height: 42px;
 
     display: grid;
+
     place-items: center;
 
     border-radius: 50%;
@@ -911,24 +1246,40 @@ h3 {
     color: white;
 
     font-size: 19px;
+
 }
 
+
+/* =========================================================
+   CONTEÚDO DA RECEITA
+========================================================= */
+
 .recipe-content {
+
     padding-top: 28px;
+
     padding-bottom: 40px;
 
     background: var(--white);
+
 }
 
+
 .recipe-content h1 {
+
     margin-bottom: 12px;
 
     font-size: 51px;
 
     line-height: .88;
+
+    letter-spacing: -.04em;
+
 }
 
-.recipe-content .lead {
+
+.lead {
+
     margin-bottom: 23px;
 
     color: var(--gray);
@@ -936,24 +1287,30 @@ h3 {
     font-size: 12px;
 
     line-height: 1.55;
+
 }
 
 
 /* =========================================================
-   INFORMAÇÕES DA RECEITA
+   INFORMAÇÕES RÁPIDAS
 ========================================================= */
 
 .info-strip {
+
     display: grid;
 
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns:
+        repeat(3, 1fr);
 
     gap: 7px;
 
     margin-bottom: 26px;
+
 }
 
+
 .info-strip div {
+
     min-height: 69px;
 
     display: flex;
@@ -967,32 +1324,45 @@ h3 {
     border-radius: 15px;
 
     background: var(--cream);
+
 }
 
+
 .info-strip span {
+
     margin-bottom: 4px;
 
     color: #8c867e;
 
     font-size: 7px;
 
+    font-weight: 700;
+
     text-transform: uppercase;
 
     letter-spacing: .08em;
+
 }
 
+
 .info-strip strong {
-    font-family: "Playfair Display", Georgia, serif;
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
 
     font-size: 15px;
+
 }
 
 
 /* =========================================================
-   NUTRIÇÃO DA RECEITA
+   NUTRIÇÃO
 ========================================================= */
 
 .nutrition-box {
+
     margin-bottom: 27px;
 
     padding: 17px;
@@ -1000,50 +1370,73 @@ h3 {
     border-radius: 20px;
 
     background: var(--yellow);
+
 }
+
 
 .nutrition-box .eyebrow {
+
     margin-bottom: 13px;
+
 }
 
+
 .nutrition-grid {
+
     display: grid;
 
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns:
+        repeat(3, 1fr);
 
     gap: 8px;
 
     margin-bottom: 11px;
+
 }
 
+
 .nutrition-grid div {
+
     display: flex;
 
     flex-direction: column;
 
     gap: 3px;
+
 }
+
 
 .nutrition-grid strong {
-    font-family: "Playfair Display", Georgia, serif;
+
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
 
     font-size: 19px;
+
 }
 
+
 .nutrition-grid span {
+
     color: rgba(17, 16, 15, .6);
 
     font-size: 8px;
 
     text-transform: uppercase;
+
 }
 
+
 .nutrition-box small {
+
     color: rgba(17, 16, 15, .57);
 
     font-size: 8px;
 
     line-height: 1.4;
+
 }
 
 
@@ -1052,42 +1445,57 @@ h3 {
 ========================================================= */
 
 .recipe-section {
+
     margin-bottom: 28px;
+
 }
+
 
 .recipe-section .eyebrow {
+
     margin-bottom: 10px;
+
 }
+
 
 .recipe-section ul {
+
     list-style: none;
+
 }
 
+
 .recipe-section ul li {
+
     padding: 9px 0;
 
-    border-bottom: 1px solid #e7e2da;
+    border-bottom:
+        1px solid #e7e2da;
 
     color: #514d47;
 
     font-size: 11px;
+
+    line-height: 1.45;
+
 }
 
-.recipe-section ol {
-    margin: 0;
 
-    padding: 0;
+.recipe-section ol {
 
     list-style: none;
 
     counter-reset: recipe;
+
 }
 
+
 .recipe-section ol li {
+
     position: relative;
 
     padding:
-        3px 0 15px 37px;
+        2px 0 15px 37px;
 
     color: #514d47;
 
@@ -1096,20 +1504,26 @@ h3 {
     line-height: 1.5;
 
     counter-increment: recipe;
+
 }
 
+
 .recipe-section ol li::before {
+
     content: counter(recipe);
 
     position: absolute;
 
-    left: 0;
     top: 0;
 
+    left: 0;
+
     width: 25px;
+
     height: 25px;
 
     display: grid;
+
     place-items: center;
 
     border-radius: 50%;
@@ -1119,15 +1533,18 @@ h3 {
     color: var(--yellow);
 
     font-size: 8px;
+
     font-weight: 700;
+
 }
 
 
 /* =========================================================
-   TEMA
+   RELAÇÃO COM O TEMA
 ========================================================= */
 
 .theme-box {
+
     margin-bottom: 13px;
 
     padding: 18px;
@@ -1135,18 +1552,25 @@ h3 {
     border-radius: 20px;
 
     background: var(--cream);
+
 }
+
 
 .theme-box .eyebrow {
+
     margin-bottom: 8px;
+
 }
 
+
 .theme-box p {
+
     color: #504b45;
 
     font-size: 11px;
 
     line-height: 1.52;
+
 }
 
 
@@ -1155,27 +1579,37 @@ h3 {
 ========================================================= */
 
 .care-box {
+
     margin-bottom: 22px;
 
     padding: 18px;
 
-    border: 1px solid rgba(17, 16, 15, .1);
+    border:
+        1px solid
+        rgba(17, 16, 15, .1);
 
     border-radius: 20px;
 
     background: var(--white);
+
 }
+
 
 .care-box .eyebrow {
+
     margin-bottom: 8px;
+
 }
 
+
 .care-box p {
+
     color: var(--gray);
 
     font-size: 11px;
 
     line-height: 1.52;
+
 }
 
 
@@ -1184,6 +1618,7 @@ h3 {
 ========================================================= */
 
 .qr-box {
+
     display: flex;
 
     align-items: center;
@@ -1201,23 +1636,32 @@ h3 {
     background: var(--black);
 
     color: white;
+
 }
 
+
 .qr-box .eyebrow {
+
     margin-bottom: 7px;
 
     color: rgba(255, 255, 255, .5);
+
 }
 
+
 .qr-box h2 {
+
     margin-bottom: 7px;
 
     font-size: 21px;
 
     line-height: .95;
+
 }
 
+
 .qr-box p {
+
     max-width: 160px;
 
     margin: 0;
@@ -1227,10 +1671,14 @@ h3 {
     font-size: 9px;
 
     line-height: 1.4;
+
 }
 
+
 .qr-box img {
+
     width: 92px;
+
     height: 92px;
 
     flex-shrink: 0;
@@ -1240,6 +1688,7 @@ h3 {
     border-radius: 7px;
 
     background: white;
+
 }
 
 
@@ -1248,7 +1697,8 @@ h3 {
 ========================================================= */
 
 .footer {
-    min-height: 67px;
+
+    min-height: 70px;
 
     display: flex;
 
@@ -1256,119 +1706,192 @@ h3 {
 
     justify-content: space-between;
 
-    padding: 13px 19px;
+    padding: 14px 20px;
 
     background: var(--black);
 
     color: white;
+
 }
 
+
 .footer strong {
+
     display: block;
 
     margin-bottom: 3px;
 
-    font-family: "Playfair Display", Georgia, serif;
+    font-family:
+        "Playfair Display",
+        Georgia,
+        serif;
 
-    font-size: 16px;
+    font-size: 15px;
+
 }
 
+
 .footer span {
+
     color: #85817a;
 
     font-size: 7px;
+
 }
 
+
 .footer > a {
+
     font-size: 8px;
 
     font-weight: 700;
+
 }
 
 
 /* =========================================================
-   RESPONSIVIDADE
+   CELULAR
 ========================================================= */
 
 @media (max-width: 390px) {
 
-    .page-pad {
-        padding-left: 18px;
-        padding-right: 18px;
+    .topbar {
+
+        padding-left: 16px;
+
+        padding-right: 16px;
+
     }
 
-    .topbar {
-        padding-left: 18px;
-        padding-right: 18px;
+
+    .brand-name {
+
+        font-size: 9px;
+
     }
+
 
     .nav {
+
         gap: 12px;
+
     }
+
 
     .nav a {
+
         font-size: 9px;
+
     }
 
-    .brand span:last-child {
-        display: inline;
+
+    .page-pad {
+
+        padding-left: 17px;
+
+        padding-right: 17px;
+
     }
+
 
     .hero h1 {
+
         font-size: 52px;
+
     }
+
 
     .hero p {
-        font-size: 13px;
+
+        font-size: 12px;
+
     }
+
 
     .hero-actions {
-        gap: 15px;
+
+        gap: 14px;
+
     }
+
 
     .hero-actions .btn {
-        min-width: 150px;
+
+        min-width: 140px;
+
     }
+
 
     .image-card.tall {
+
         height: 370px;
+
     }
+
 
     .page-header h1 {
+
         font-size: 48px;
+
     }
+
 
     .science-hero h1 {
-        font-size: 52px;
+
+        font-size: 53px;
+
     }
+
 
     .menu-card > img {
+
         height: 155px;
+
     }
+
 
     .menu-card h2 {
+
         font-size: 24px;
+
     }
+
 
     .info-cards {
+
         grid-template-columns: 1fr;
+
     }
+
 
     .info-card {
+
         min-height: 145px;
+
     }
+
 
     .fact-grid {
+
         grid-template-columns: 1fr;
+
     }
 
-    .nutrition-grid {
-        grid-template-columns: repeat(3, 1fr);
+
+    .info-strip {
+
+        grid-template-columns:
+            repeat(3, 1fr);
+
     }
+
 
     .qr-box img {
-        width: 82px;
-        height: 82px;
+
+        width: 80px;
+
+        height: 80px;
+
     }
 
 }
@@ -1380,43 +1903,105 @@ h3 {
 
 @media (max-width: 340px) {
 
-    .nav {
-        gap: 9px;
+    .brand-name {
+
+        font-size: 8px;
+
     }
+
+
+    .nav {
+
+        gap: 8px;
+
+    }
+
 
     .nav a {
+
         font-size: 8px;
+
     }
 
-    .brand span:last-child {
-        display: none;
-    }
 
     .hero h1 {
+
         font-size: 47px;
+
     }
+
 
     .hero-actions {
-        flex-direction: column;
+
         align-items: stretch;
+
+        flex-direction: column;
+
     }
+
 
     .hero-actions .btn {
+
         width: 100%;
+
     }
+
 
     .text-link {
+
         align-self: flex-start;
-        margin-left: 3px;
+
     }
+
 
     .recipe-content h1 {
-        font-size: 46px;
+
+        font-size: 45px;
+
     }
 
+
     .qr-box {
+
         flex-direction: column;
+
         align-items: flex-start;
+
+    }
+
+
+    .qr-box img {
+
+        width: 110px;
+
+        height: 110px;
+
+    }
+
+}
+
+
+/* =========================================================
+   TELA MAIOR
+========================================================= */
+
+@media (min-width: 481px) {
+
+    body {
+
+        padding: 20px 0;
+
+    }
+
+
+    .app-shell {
+
+        border-radius: 28px;
+
+        box-shadow:
+            0 20px 60px
+            rgba(0, 0, 0, .14);
+
     }
 
 }
