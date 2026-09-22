@@ -1,6 +1,6 @@
-/* =========================================
+/* =========================================================
    RESET
-========================================= */
+========================================================= */
 
 * {
     margin: 0;
@@ -8,28 +8,22 @@
     box-sizing: border-box;
 }
 
-
 html {
     scroll-behavior: smooth;
 }
 
-
 body {
     min-height: 100vh;
-
     background: #dfe2e4;
-
     color: #11100f;
-
     font-family: "DM Sans", Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
 }
-
 
 a {
     color: inherit;
     text-decoration: none;
 }
-
 
 img {
     display: block;
@@ -37,44 +31,54 @@ img {
 }
 
 
-/* =========================================
+/* =========================================================
    CORES
-========================================= */
+========================================================= */
 
 :root {
     --yellow: #ffd52f;
     --black: #11100f;
     --white: #fffdf8;
-    --cream: #eeeae2;
+    --cream: #f2eee6;
     --gray: #68645e;
 }
 
 
-/* =========================================
-   CONTAINER PRINCIPAL
-========================================= */
+/* =========================================================
+   APLICAÇÃO
+========================================================= */
 
 .app-shell {
     width: 100%;
     max-width: 480px;
     min-height: 100vh;
-
     margin: 0 auto;
-
     overflow: hidden;
-
     background: var(--yellow);
 }
 
 
-/* =========================================
-   MENU SUPERIOR
-========================================= */
+/* =========================================================
+   ESPAÇAMENTO
+========================================================= */
+
+.page-pad {
+    padding-left: 21px;
+    padding-right: 21px;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
 
 .topbar {
-    height: 49px;
+    position: relative;
+    z-index: 20;
 
-    padding: 0 19px;
+    height: 54px;
+
+    padding: 0 21px;
 
     display: flex;
     align-items: center;
@@ -83,45 +87,36 @@ img {
     background: var(--white);
 }
 
-
 .brand {
     display: flex;
     align-items: center;
-
     gap: 7px;
 
     font-size: 11px;
     font-weight: 700;
 }
 
-
 .brand-mark {
-    width: 24px;
-    height: 24px;
+    width: 25px;
+    height: 25px;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    place-items: center;
 
     border-radius: 50%;
 
     background: var(--black);
-
     color: var(--yellow);
 
     font-family: Georgia, serif;
-
     font-size: 13px;
 }
-
 
 .nav {
     display: flex;
     align-items: center;
-
-    gap: 17px;
+    gap: 18px;
 }
-
 
 .nav a {
     position: relative;
@@ -129,15 +124,13 @@ img {
     color: #77736d;
 
     font-size: 10px;
+    font-weight: 500;
 }
-
 
 .nav a.active {
     color: var(--black);
-
     font-weight: 700;
 }
-
 
 .nav a.active::after {
     content: "";
@@ -146,8 +139,7 @@ img {
 
     left: 0;
     right: 0;
-
-    bottom: -7px;
+    bottom: -8px;
 
     height: 2px;
 
@@ -155,34 +147,9 @@ img {
 }
 
 
-/* =========================================
-   ESPAÇAMENTO
-========================================= */
-
-.page-pad {
-    padding-left: 19px;
-    padding-right: 19px;
-}
-
-
-/* =========================================
-   CABEÇALHO
-========================================= */
-
-.eyebrow {
-    display: block;
-
-    margin-bottom: 12px;
-
-    color: rgba(17, 16, 15, 0.65);
-
-    font-size: 8px;
-
-    font-weight: 700;
-
-    letter-spacing: 0.13em;
-}
-
+/* =========================================================
+   TIPOGRAFIA
+========================================================= */
 
 h1,
 h2,
@@ -190,29 +157,283 @@ h3 {
     font-family: "Playfair Display", Georgia, serif;
 }
 
+.eyebrow {
+    display: block;
 
-.page-header {
-    padding-top: 39px;
+    margin-bottom: 13px;
 
+    color: rgba(17, 16, 15, .62);
+
+    font-size: 8px;
+    font-weight: 700;
+
+    letter-spacing: .13em;
+}
+
+
+/* =========================================================
+   BOTÕES
+========================================================= */
+
+.btn {
+    min-height: 42px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 18px;
+
+    padding: 0 15px;
+
+    border-radius: 12px;
+
+    font-size: 9px;
+    font-weight: 700;
+}
+
+.btn-dark {
+    background: var(--black);
+    color: white;
+}
+
+.btn-yellow {
+    background: var(--yellow);
+    color: var(--black);
+}
+
+.btn span {
+    font-size: 13px;
+}
+
+.text-link {
+    font-size: 11px;
+    font-weight: 700;
+
+    border-bottom: 1px solid var(--black);
+
+    padding-bottom: 4px;
+}
+
+
+/* =========================================================
+   HOME — HERO
+========================================================= */
+
+.hero {
+    padding-top: 48px;
     padding-bottom: 34px;
 }
 
+.hero h1 {
+    max-width: 360px;
 
-.page-header h1 {
-    margin-bottom: 16px;
+    margin-bottom: 17px;
 
-    font-size: 49px;
+    font-size: 60px;
 
-    line-height: 0.84;
+    line-height: .84;
 
-    letter-spacing: -0.05em;
+    letter-spacing: -.055em;
+}
+
+.hero h1 em {
+    font-style: normal;
+}
+
+.hero p {
+    max-width: 350px;
+
+    margin-bottom: 24px;
+
+    color: rgba(17, 16, 15, .8);
+
+    font-size: 14px;
+
+    line-height: 1.48;
+}
+
+.hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.hero-actions .btn {
+    min-width: 145px;
 }
 
 
-.page-header p {
-    max-width: 315px;
+/* =========================================================
+   HOME — IMAGEM PRINCIPAL
+========================================================= */
 
-    color: rgba(17, 16, 15, 0.78);
+.feature-image {
+    padding-bottom: 42px;
+}
+
+.image-card {
+    position: relative;
+
+    width: 100%;
+
+    overflow: hidden;
+
+    border-radius: 27px;
+}
+
+.image-card.tall {
+    height: 400px;
+}
+
+.image-card img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.image-overlay {
+    position: absolute;
+
+    left: 16px;
+    right: 16px;
+    bottom: 16px;
+
+    padding: 17px;
+
+    border-radius: 19px;
+
+    background: rgba(10, 10, 10, .78);
+
+    color: white;
+}
+
+.image-overlay span {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: rgba(255, 255, 255, .6);
+
+    font-size: 8px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: .1em;
+}
+
+.image-overlay strong {
+    display: block;
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 26px;
+
+    line-height: .96;
+}
+
+
+/* =========================================================
+   HOME — SEÇÃO
+========================================================= */
+
+.section {
+    padding-top: 43px;
+    padding-bottom: 43px;
+
+    background: var(--cream);
+}
+
+.section-heading h2 {
+    margin-bottom: 24px;
+
+    font-size: 39px;
+
+    line-height: .92;
+}
+
+
+/* =========================================================
+   HOME — CARDS DNA/RNA
+========================================================= */
+
+.info-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+}
+
+.info-card {
+    min-height: 175px;
+
+    padding: 18px;
+
+    border-radius: 21px;
+
+    background: var(--white);
+}
+
+.info-number {
+    display: block;
+
+    margin-bottom: 28px;
+
+    color: #99938b;
+
+    font-size: 8px;
+    font-weight: 700;
+}
+
+.info-card h3 {
+    margin-bottom: 7px;
+
+    font-size: 25px;
+
+    line-height: 1;
+}
+
+.info-card p {
+    color: var(--gray);
+
+    font-size: 10px;
+
+    line-height: 1.45;
+}
+
+
+/* =========================================================
+   HOME — CTA
+========================================================= */
+
+.menu-preview {
+    padding-top: 44px;
+    padding-bottom: 46px;
+
+    background: var(--black);
+
+    color: white;
+}
+
+.menu-preview .eyebrow {
+    color: rgba(255, 255, 255, .5);
+}
+
+.menu-preview h2 {
+    margin-bottom: 14px;
+
+    font-size: 39px;
+
+    line-height: .9;
+}
+
+.menu-preview p {
+    max-width: 285px;
+
+    margin-bottom: 22px;
+
+    color: #aaa59d;
 
     font-size: 12px;
 
@@ -220,83 +441,126 @@ h3 {
 }
 
 
-/* =========================================
-   LISTA DOS PRATOS
-========================================= */
+/* =========================================================
+   FRASES DO PAINEL
+========================================================= */
+
+.panel-section {
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    background: var(--cream);
+}
+
+.panel-phrase {
+    margin-top: 11px;
+
+    padding: 18px;
+
+    border-radius: 19px;
+
+    background: var(--white);
+
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 17px;
+
+    line-height: 1.17;
+}
+
+
+/* =========================================================
+   CABEÇALHO DO CARDÁPIO
+========================================================= */
+
+.page-header {
+    padding-top: 40px;
+    padding-bottom: 34px;
+}
+
+.page-header h1 {
+    margin-bottom: 17px;
+
+    font-size: 54px;
+
+    line-height: .84;
+
+    letter-spacing: -.05em;
+}
+
+.page-header p {
+    max-width: 315px;
+
+    color: rgba(17, 16, 15, .76);
+
+    font-size: 12px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   LISTA DO CARDÁPIO
+========================================================= */
 
 .menu-list {
     display: flex;
 
     flex-direction: column;
 
-    gap: 13px;
+    gap: 14px;
 
-    padding-bottom: 25px;
+    padding-bottom: 26px;
 }
 
 
-/* =========================================
-   CARD
-========================================= */
+/* =========================================================
+   CARD DO PRATO
+========================================================= */
 
 .menu-card {
     overflow: hidden;
 
-    border-radius: 21px;
+    border-radius: 22px;
 
     background: var(--white);
 }
 
-
-/* =========================================
-   IMAGEM
-========================================= */
-
 .menu-card > img {
     width: 100%;
-
-    height: 157px;
+    height: 170px;
 
     object-fit: cover;
 }
 
-
-/* =========================================
-   CONTEÚDO
-========================================= */
-
 .menu-card-body {
-    padding: 14px 14px 15px;
+    padding: 14px;
 }
 
 
-/* =========================================
+/* =========================================================
    TOPO DO CARD
-========================================= */
+========================================================= */
 
 .card-top {
-    width: 100%;
-
     display: flex;
-
     align-items: center;
-
     justify-content: space-between;
 
-    margin-bottom: 10px;
+    margin-bottom: 9px;
 }
 
 
-/* =========================================
-   ÁCIDO NUCLEICO
-========================================= */
+/* =========================================================
+   ETIQUETA ÁCIDO NUCLEICO
+========================================================= */
 
 .tag {
     display: inline-flex;
 
     align-items: center;
 
-    min-height: 25px;
+    min-height: 24px;
 
     padding: 0 10px;
 
@@ -310,45 +574,34 @@ h3 {
 
     font-weight: 700;
 
-    letter-spacing: 0.07em;
+    letter-spacing: .06em;
 }
 
 
-/* =========================================
-   NÚMERO DO PRATO
-========================================= */
+/* =========================================================
+   NÚMERO
+========================================================= */
 
 .price {
-    color: #99938b;
+    color: #aaa49c;
 
     font-size: 8px;
 }
 
 
-/* =========================================
+/* =========================================================
    NOME DO PRATO
-========================================= */
+========================================================= */
 
 .menu-card h2 {
     margin-bottom: 6px;
 
-    color: var(--black);
-
-    font-size: 25px;
+    font-size: 27px;
 
     line-height: 1;
-
-    letter-spacing: -0.02em;
 }
 
-
-/* =========================================
-   DESCRIÇÃO
-========================================= */
-
 .menu-card p {
-    max-width: 430px;
-
     margin-bottom: 0;
 
     color: var(--gray);
@@ -359,9 +612,9 @@ h3 {
 }
 
 
-/* =========================================
-   NUTRIENTES SECUNDÁRIOS
-========================================= */
+/* =========================================================
+   OUTROS NUTRIENTES
+========================================================= */
 
 .nutrient-tags {
     display: flex;
@@ -370,11 +623,10 @@ h3 {
 
     gap: 5px;
 
-    margin-top: 10px;
+    margin-top: 11px;
 
     margin-bottom: 14px;
 }
-
 
 .nutrient-tags span {
     display: inline-flex;
@@ -383,7 +635,7 @@ h3 {
 
     min-height: 23px;
 
-    padding: 0 8px;
+    padding: 0 9px;
 
     border-radius: 50px;
 
@@ -394,49 +646,14 @@ h3 {
     font-size: 7px;
 
     font-weight: 600;
+
+    white-space: nowrap;
 }
 
 
-/* =========================================
-   BOTÃO
-========================================= */
-
-.btn {
-    min-height: 34px;
-
-    display: inline-flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    gap: 18px;
-
-    padding: 0 14px;
-
-    border-radius: 11px;
-
-    font-size: 9px;
-
-    font-weight: 700;
-}
-
-
-.btn-dark {
-    background: var(--black);
-
-    color: white;
-}
-
-
-.btn span {
-    font-size: 12px;
-}
-
-
-/* =========================================
-   EXPLICAÇÃO DO ÁCIDO NUCLEICO
-========================================= */
+/* =========================================================
+   AVISO SOBRE ÁCIDO NUCLEICO
+========================================================= */
 
 .menu-note {
     display: flex;
@@ -447,9 +664,8 @@ h3 {
 
     padding-top: 5px;
 
-    padding-bottom: 32px;
+    padding-bottom: 34px;
 }
-
 
 .menu-note > span {
     width: 30px;
@@ -457,11 +673,8 @@ h3 {
 
     flex-shrink: 0;
 
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
+    display: grid;
+    place-items: center;
 
     border-radius: 50%;
 
@@ -474,7 +687,6 @@ h3 {
     font-size: 12px;
 }
 
-
 .menu-note strong {
     display: block;
 
@@ -483,19 +695,557 @@ h3 {
     font-size: 10px;
 }
 
-
 .menu-note p {
-    color: rgba(17, 16, 15, 0.68);
+    margin: 0;
+
+    color: rgba(17, 16, 15, .67);
 
     font-size: 9px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   PÁGINA SOBRE
+========================================================= */
+
+.science-hero {
+    padding-top: 43px;
+    padding-bottom: 34px;
+}
+
+.science-hero h1 {
+    margin-bottom: 16px;
+
+    font-size: 58px;
+
+    line-height: .84;
+
+    letter-spacing: -.05em;
+}
+
+.science-hero h1 em {
+    font-style: normal;
+}
+
+.science-hero p {
+    max-width: 340px;
+
+    color: rgba(17, 16, 15, .78);
+
+    font-size: 13px;
+
+    line-height: 1.55;
+}
+
+.science-photo {
+    padding-bottom: 38px;
+}
+
+.science-photo .image-card {
+    height: 320px;
+}
+
+.definition {
+    padding-top: 38px;
+    padding-bottom: 38px;
+
+    background: var(--white);
+}
+
+.definition .number {
+    margin-bottom: 17px;
+
+    color: #99938b;
+
+    font-size: 9px;
+
+    font-weight: 700;
+}
+
+.definition h2 {
+    margin-bottom: 13px;
+
+    font-size: 44px;
+
+    line-height: .9;
+}
+
+.definition p {
+    color: var(--gray);
+
+    font-size: 12px;
+
+    line-height: 1.58;
+}
+
+.second-definition {
+    background: var(--yellow);
+}
+
+
+/* =========================================================
+   FATOS SOBRE DNA/RNA
+========================================================= */
+
+.fact-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+
+    padding-top: 23px;
+    padding-bottom: 36px;
+
+    background: var(--yellow);
+}
+
+.fact-grid article {
+    min-height: 155px;
+
+    padding: 17px;
+
+    border-radius: 20px;
+
+    background: rgba(255, 255, 255, .55);
+}
+
+.fact-grid span {
+    display: block;
+
+    margin-bottom: 26px;
+
+    font-size: 8px;
+
+    font-weight: 700;
+
+    letter-spacing: .06em;
+}
+
+.fact-grid h3 {
+    margin-bottom: 5px;
+
+    font-size: 25px;
+}
+
+.fact-grid p {
+    color: rgba(17, 16, 15, .65);
+
+    font-size: 10px;
 
     line-height: 1.45;
 }
 
 
-/* =========================================
-   RODAPÉ
-========================================= */
+/* =========================================================
+   CTA FINAL
+========================================================= */
+
+.cta-card {
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    background: var(--black);
+
+    color: white;
+}
+
+.cta-card .eyebrow {
+    color: rgba(255, 255, 255, .5);
+}
+
+.cta-card h2 {
+    margin-bottom: 9px;
+
+    font-size: 39px;
+
+    line-height: .92;
+}
+
+.cta-card p {
+    margin-bottom: 20px;
+
+    color: #aaa59d;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   RECEITA
+========================================================= */
+
+.recipe-hero {
+    position: relative;
+
+    height: 300px;
+
+    overflow: hidden;
+}
+
+.recipe-hero img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.back-button {
+    position: absolute;
+
+    top: 17px;
+    left: 17px;
+
+    width: 42px;
+    height: 42px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: rgba(0, 0, 0, .65);
+
+    color: white;
+
+    font-size: 19px;
+}
+
+.recipe-content {
+    padding-top: 28px;
+    padding-bottom: 40px;
+
+    background: var(--white);
+}
+
+.recipe-content h1 {
+    margin-bottom: 12px;
+
+    font-size: 51px;
+
+    line-height: .88;
+}
+
+.recipe-content .lead {
+    margin-bottom: 23px;
+
+    color: var(--gray);
+
+    font-size: 12px;
+
+    line-height: 1.55;
+}
+
+
+/* =========================================================
+   INFORMAÇÕES DA RECEITA
+========================================================= */
+
+.info-strip {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 7px;
+
+    margin-bottom: 26px;
+}
+
+.info-strip div {
+    min-height: 69px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding: 11px;
+
+    border-radius: 15px;
+
+    background: var(--cream);
+}
+
+.info-strip span {
+    margin-bottom: 4px;
+
+    color: #8c867e;
+
+    font-size: 7px;
+
+    text-transform: uppercase;
+
+    letter-spacing: .08em;
+}
+
+.info-strip strong {
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 15px;
+}
+
+
+/* =========================================================
+   NUTRIÇÃO DA RECEITA
+========================================================= */
+
+.nutrition-box {
+    margin-bottom: 27px;
+
+    padding: 17px;
+
+    border-radius: 20px;
+
+    background: var(--yellow);
+}
+
+.nutrition-box .eyebrow {
+    margin-bottom: 13px;
+}
+
+.nutrition-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 8px;
+
+    margin-bottom: 11px;
+}
+
+.nutrition-grid div {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 3px;
+}
+
+.nutrition-grid strong {
+    font-family: "Playfair Display", Georgia, serif;
+
+    font-size: 19px;
+}
+
+.nutrition-grid span {
+    color: rgba(17, 16, 15, .6);
+
+    font-size: 8px;
+
+    text-transform: uppercase;
+}
+
+.nutrition-box small {
+    color: rgba(17, 16, 15, .57);
+
+    font-size: 8px;
+
+    line-height: 1.4;
+}
+
+
+/* =========================================================
+   SEÇÕES DA RECEITA
+========================================================= */
+
+.recipe-section {
+    margin-bottom: 28px;
+}
+
+.recipe-section .eyebrow {
+    margin-bottom: 10px;
+}
+
+.recipe-section ul {
+    list-style: none;
+}
+
+.recipe-section ul li {
+    padding: 9px 0;
+
+    border-bottom: 1px solid #e7e2da;
+
+    color: #514d47;
+
+    font-size: 11px;
+}
+
+.recipe-section ol {
+    margin: 0;
+
+    padding: 0;
+
+    list-style: none;
+
+    counter-reset: recipe;
+}
+
+.recipe-section ol li {
+    position: relative;
+
+    padding:
+        3px 0 15px 37px;
+
+    color: #514d47;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+
+    counter-increment: recipe;
+}
+
+.recipe-section ol li::before {
+    content: counter(recipe);
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 25px;
+    height: 25px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 50%;
+
+    background: var(--black);
+
+    color: var(--yellow);
+
+    font-size: 8px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   TEMA
+========================================================= */
+
+.theme-box {
+    margin-bottom: 13px;
+
+    padding: 18px;
+
+    border-radius: 20px;
+
+    background: var(--cream);
+}
+
+.theme-box .eyebrow {
+    margin-bottom: 8px;
+}
+
+.theme-box p {
+    color: #504b45;
+
+    font-size: 11px;
+
+    line-height: 1.52;
+}
+
+
+/* =========================================================
+   CUIDADOS
+========================================================= */
+
+.care-box {
+    margin-bottom: 22px;
+
+    padding: 18px;
+
+    border: 1px solid rgba(17, 16, 15, .1);
+
+    border-radius: 20px;
+
+    background: var(--white);
+}
+
+.care-box .eyebrow {
+    margin-bottom: 8px;
+}
+
+.care-box p {
+    color: var(--gray);
+
+    font-size: 11px;
+
+    line-height: 1.52;
+}
+
+
+/* =========================================================
+   QR CODE
+========================================================= */
+
+.qr-box {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-bottom: 23px;
+
+    padding: 17px;
+
+    border-radius: 21px;
+
+    background: var(--black);
+
+    color: white;
+}
+
+.qr-box .eyebrow {
+    margin-bottom: 7px;
+
+    color: rgba(255, 255, 255, .5);
+}
+
+.qr-box h2 {
+    margin-bottom: 7px;
+
+    font-size: 21px;
+
+    line-height: .95;
+}
+
+.qr-box p {
+    max-width: 160px;
+
+    margin: 0;
+
+    color: #aaa59d;
+
+    font-size: 9px;
+
+    line-height: 1.4;
+}
+
+.qr-box img {
+    width: 92px;
+    height: 92px;
+
+    flex-shrink: 0;
+
+    padding: 4px;
+
+    border-radius: 7px;
+
+    background: white;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
 
 .footer {
     min-height: 67px;
@@ -513,7 +1263,6 @@ h3 {
     color: white;
 }
 
-
 .footer strong {
     display: block;
 
@@ -524,13 +1273,11 @@ h3 {
     font-size: 16px;
 }
 
-
 .footer span {
     color: #85817a;
 
     font-size: 7px;
 }
-
 
 .footer > a {
     font-size: 8px;
@@ -539,75 +1286,137 @@ h3 {
 }
 
 
-/* =========================================
-   TELA MAIOR
-========================================= */
+/* =========================================================
+   RESPONSIVIDADE
+========================================================= */
 
-@media (min-width: 481px) {
+@media (max-width: 390px) {
 
-    body {
-        padding: 20px 0;
+    .page-pad {
+        padding-left: 18px;
+        padding-right: 18px;
     }
-
-
-    .app-shell {
-        border-radius: 28px;
-
-        box-shadow:
-            0 15px 50px rgba(0, 0, 0, 0.15);
-    }
-
-}
-
-
-/* =========================================
-   CELULARES PEQUENOS
-========================================= */
-
-@media (max-width: 360px) {
 
     .topbar {
-        padding-left: 15px;
-        padding-right: 15px;
+        padding-left: 18px;
+        padding-right: 18px;
     }
-
 
     .nav {
-        gap: 11px;
+        gap: 12px;
     }
-
 
     .nav a {
         font-size: 9px;
     }
 
-
-    .page-pad {
-        padding-left: 16px;
-        padding-right: 16px;
+    .brand span:last-child {
+        display: inline;
     }
 
+    .hero h1 {
+        font-size: 52px;
+    }
+
+    .hero p {
+        font-size: 13px;
+    }
+
+    .hero-actions {
+        gap: 15px;
+    }
+
+    .hero-actions .btn {
+        min-width: 150px;
+    }
+
+    .image-card.tall {
+        height: 370px;
+    }
 
     .page-header h1 {
-        font-size: 45px;
+        font-size: 48px;
     }
 
+    .science-hero h1 {
+        font-size: 52px;
+    }
 
     .menu-card > img {
-        height: 145px;
+        height: 155px;
     }
 
-
-    .nutrient-tags {
-        gap: 4px;
+    .menu-card h2 {
+        font-size: 24px;
     }
 
+    .info-cards {
+        grid-template-columns: 1fr;
+    }
 
-    .nutrient-tags span {
-        font-size: 6.5px;
+    .info-card {
+        min-height: 145px;
+    }
 
-        padding-left: 7px;
-        padding-right: 7px;
+    .fact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nutrition-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .qr-box img {
+        width: 82px;
+        height: 82px;
+    }
+
+}
+
+
+/* =========================================================
+   CELULARES MUITO PEQUENOS
+========================================================= */
+
+@media (max-width: 340px) {
+
+    .nav {
+        gap: 9px;
+    }
+
+    .nav a {
+        font-size: 8px;
+    }
+
+    .brand span:last-child {
+        display: none;
+    }
+
+    .hero h1 {
+        font-size: 47px;
+    }
+
+    .hero-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+    }
+
+    .text-link {
+        align-self: flex-start;
+        margin-left: 3px;
+    }
+
+    .recipe-content h1 {
+        font-size: 46px;
+    }
+
+    .qr-box {
+        flex-direction: column;
+        align-items: flex-start;
     }
 
 }
