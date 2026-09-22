@@ -7,20 +7,33 @@
 
     <meta
         name="viewport"
-        content="width=device-width, initial-scale=1.0">
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <title>O que são? | Ácido Nucleico</title>
 
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap"
-        rel="stylesheet">
+        rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin
+    >
 
-    <link rel="stylesheet" href="./style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap"
+        rel="stylesheet"
+    >
+
+
+    <link
+        rel="stylesheet"
+        href="./style.css"
+    >
 
 </head>
+
 
 <body>
 
@@ -31,28 +44,74 @@
 
     <header class="topbar">
 
-        <a href="index.html" class="brand">
+        <a
+            href="index.html"
+            class="brand"
+        >
 
-            <span class="brand-mark">
-                N
+            <span class="brand-logo">
+
+                <svg
+                    viewBox="0 0 40 40"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+
+                    <path
+                        d="M12 4 C28 9 28 15 12 20 C28 25 28 31 12 36"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.4"
+                    />
+
+                    <path
+                        d="M28 4 C12 9 12 15 28 20 C12 25 12 31 28 36"
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-width="2.4"
+                    />
+
+                    <path
+                        d="M14 10H26"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                    />
+
+                    <path
+                        d="M13 20H27"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                    />
+
+                    <path
+                        d="M14 30H26"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                    />
+
+                    <circle
+                        cx="7"
+                        cy="10"
+                        r="2.3"
+                        fill="currentColor"
+                    />
+
+                    <circle
+                        cx="33"
+                        cy="10"
+                        r="2.3"
+                        fill="currentColor"
+                    />
+
+                </svg>
+
             </span>
 
-            <span>
-                Núcleo
+
+            <span class="brand-name">
+                Ácido nucleico
             </span>
 
         </a>
-
-
-        <button
-            class="menu-toggle"
-            type="button"
-            aria-label="Abrir menu"
-            aria-expanded="false">
-
-            ☰
-
-        </button>
 
 
         <nav class="nav">
@@ -65,7 +124,10 @@
                 Cardápio
             </a>
 
-            <a href="sobre.html" class="active">
+            <a
+                href="sobre.html"
+                class="active"
+            >
                 O que são
             </a>
 
@@ -74,13 +136,15 @@
     </header>
 
 
+
     <!-- HERO -->
 
     <section class="science-hero page-pad">
 
         <span class="eyebrow">
-            nosso tema
+            NOSSO TEMA
         </span>
+
 
         <h1>
             Ácido
@@ -88,13 +152,15 @@
             <em>nucleico.</em>
         </h1>
 
+
         <p>
-            É uma macromolécula encontrada nas células dos
-            seres vivos. Os principais exemplos são o DNA
-            e o RNA.
+            Ácidos nucleicos são macromoléculas presentes
+            nas células dos seres vivos. Os principais
+            exemplos são o DNA e o RNA.
         </p>
 
     </section>
+
 
 
     <!-- IMAGEM -->
@@ -105,24 +171,28 @@
 
             <img
                 src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=1000&q=85"
-                alt="Representação científica">
+                alt="Laboratório e ciência"
+            >
 
         </div>
 
     </section>
 
 
+
     <!-- DNA -->
 
     <section class="definition page-pad">
 
-        <div class="number">
+        <span class="section-index">
             01
-        </div>
+        </span>
+
 
         <h2>
             DNA
         </h2>
+
 
         <p>
             O DNA é responsável por armazenar grande parte
@@ -134,35 +204,40 @@
     </section>
 
 
+
     <!-- RNA -->
 
-    <section class="definition page-pad second-definition">
+    <section class="definition second-definition page-pad">
 
-        <div class="number">
+        <span class="section-index">
             02
-        </div>
+        </span>
+
 
         <h2>
             RNA
         </h2>
 
+
         <p>
             O RNA participa da leitura e utilização das
-            informações genéticas. Ele possui funções
+            informações genéticas e possui funções
             importantes na produção de proteínas.
         </p>
 
     </section>
 
 
-    <!-- RELAÇÃO -->
+
+    <!-- DIFERENÇA -->
 
     <section class="fact-grid page-pad">
+
 
         <article>
 
             <span>
-                INFORMAÇÃO
+                ARMAZENAMENTO
             </span>
 
             <h3>
@@ -170,7 +245,7 @@
             </h3>
 
             <p>
-                Armazena informações genéticas.
+                Guarda informações genéticas.
             </p>
 
         </article>
@@ -179,7 +254,7 @@
         <article>
 
             <span>
-                FUNCIONAMENTO
+                UTILIZAÇÃO
             </span>
 
             <h3>
@@ -187,12 +262,14 @@
             </h3>
 
             <p>
-                Participa da utilização dessas informações.
+                Participa da utilização das informações.
             </p>
 
         </article>
 
+
     </section>
+
 
 
     <!-- FRASES -->
@@ -200,45 +277,55 @@
     <section class="panel-section page-pad">
 
         <span class="eyebrow">
-            para o painel
+            PARA O PAINEL
         </span>
 
-        <div class="panel-phrase">
-            O DNA armazena informações genéticas essenciais
-            para o funcionamento dos seres vivos.
-        </div>
 
         <div class="panel-phrase">
-            O RNA participa da utilização das informações
-            genéticas na produção de proteínas.
+
+            O DNA armazena informações genéticas essenciais
+            para o funcionamento dos seres vivos.
+
+        </div>
+
+
+        <div class="panel-phrase">
+
+            O RNA participa da utilização dessas informações
+            na produção de proteínas.
+
         </div>
 
     </section>
+
 
 
     <!-- CTA -->
 
     <section class="cta-card page-pad">
 
-        <div>
+        <span class="eyebrow">
+            AGORA QUE VOCÊ SABE
+        </span>
 
-            <span class="eyebrow">
-                depois da teoria...
-            </span>
 
-            <h2>
-                Vamos para o prato?
-            </h2>
+        <h2>
+            Vamos para
+            <br>
+            o prato?
+        </h2>
 
-            <p>
-                Conheça nossas quatro receitas.
-            </p>
 
-        </div>
+        <p>
+            Conheça os quatro alimentos escolhidos
+            para o café da tarde.
+        </p>
+
 
         <a
             href="cardapio.html"
-            class="btn btn-yellow">
+            class="btn btn-yellow"
+        >
 
             Abrir cardápio
 
@@ -251,25 +338,30 @@
     </section>
 
 
+
+    <!-- FOOTER -->
+
     <footer class="footer">
 
         <div>
 
             <strong>
-                Núcleo
+                Ácido nucleico
             </strong>
 
             <span>
-                Ácido nucleico • Café da tarde
+                Ciência • alimentação • INF1D
             </span>
 
         </div>
+
 
         <a href="index.html">
             Início →
         </a>
 
     </footer>
+
 
 </main>
 
