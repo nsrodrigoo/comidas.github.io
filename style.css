@@ -1,6 +1,17 @@
+/* =========================================================
+   NÚCLEO
+   STYLE.CSS
+========================================================= */
+
+
+/* =========================================================
+   VARIÁVEIS
+========================================================= */
+
 :root {
 
     --yellow: #ffd52f;
+
     --yellow-soft: #ffe477;
 
     --ink: #11100f;
@@ -17,8 +28,13 @@
 
     --shadow:
         0 18px 50px rgba(17, 16, 15, .12);
+
 }
 
+
+/* =========================================================
+   RESET
+========================================================= */
 
 * {
     box-sizing: border-box;
@@ -34,6 +50,8 @@ body {
 
     margin: 0;
 
+    min-height: 100vh;
+
     background: #dfe2e3;
 
     color: var(--ink);
@@ -43,7 +61,6 @@ body {
         Arial,
         sans-serif;
 
-    min-height: 100vh;
 }
 
 
@@ -52,6 +69,7 @@ a {
     color: inherit;
 
     text-decoration: none;
+
 }
 
 
@@ -70,9 +88,9 @@ button {
 }
 
 
-/* =========================
-   APP
-========================= */
+/* =========================================================
+   CONTAINER PRINCIPAL
+========================================================= */
 
 .app-shell {
 
@@ -94,9 +112,9 @@ button {
 }
 
 
-/* =========================
+/* =========================================================
    HEADER
-========================= */
+========================================================= */
 
 .topbar {
 
@@ -104,12 +122,11 @@ button {
 
     top: 0;
 
-    z-index: 20;
+    z-index: 100;
 
     min-height: 72px;
 
-    padding:
-        0 20px;
+    padding: 0 20px;
 
     display: flex;
 
@@ -137,6 +154,8 @@ button {
 
     gap: 9px;
 
+    font-size: 15px;
+
     font-weight: 800;
 
     letter-spacing: -.03em;
@@ -150,11 +169,11 @@ button {
 
     height: 31px;
 
-    border-radius: 50%;
-
     display: grid;
 
     place-items: center;
+
+    border-radius: 50%;
 
     background: var(--ink);
 
@@ -162,6 +181,7 @@ button {
 
     font-family:
         "Playfair Display",
+        Georgia,
         serif;
 
     font-size: 18px;
@@ -177,19 +197,18 @@ button {
 
     gap: 18px;
 
-    font-size: 15px;
-
     color: #686868;
+
+    font-size: 15px;
 
 }
 
 
 .nav a {
 
-    padding:
-        25px 0;
-
     position: relative;
+
+    padding: 25px 0;
 
     white-space: nowrap;
 
@@ -219,9 +238,9 @@ button {
 
     height: 2px;
 
-    background: var(--ink);
-
     border-radius: 99px;
+
+    background: var(--ink);
 
 }
 
@@ -232,16 +251,20 @@ button {
 
     border: 0;
 
-    background: none;
+    background: transparent;
 
-    font-size: 23px;
+    color: var(--ink);
+
+    font-size: 24px;
+
+    line-height: 1;
 
 }
 
 
-/* =========================
-   GERAL
-========================= */
+/* =========================================================
+   ELEMENTOS GERAIS
+========================================================= */
 
 .page-pad {
 
@@ -256,18 +279,18 @@ button {
 
     display: inline-block;
 
-    text-transform: uppercase;
+    margin-bottom: 13px;
 
-    letter-spacing: .13em;
+    color:
+        rgba(17, 16, 15, .58);
 
     font-size: 10px;
 
     font-weight: 800;
 
-    color:
-        rgba(17, 16, 15, .58);
+    letter-spacing: .13em;
 
-    margin-bottom: 13px;
+    text-transform: uppercase;
 
 }
 
@@ -303,18 +326,15 @@ h2 em {
 }
 
 
-/* =========================
+/* =========================================================
    BOTÕES
-========================= */
+========================================================= */
 
 .btn {
 
     min-height: 50px;
 
-    padding:
-        0 18px;
-
-    border-radius: 14px;
+    padding: 0 18px;
 
     display: inline-flex;
 
@@ -324,16 +344,17 @@ h2 em {
 
     gap: 22px;
 
-    font-weight: 800;
+    border: 1px solid transparent;
+
+    border-radius: 14px;
 
     font-size: 13px;
 
-    border:
-        1px solid transparent;
+    font-weight: 800;
 
     transition:
-        transform .2s,
-        box-shadow .2s;
+        transform .2s ease,
+        box-shadow .2s ease;
 
 }
 
@@ -372,8 +393,7 @@ h2 em {
 
     min-height: 44px;
 
-    padding:
-        0 15px;
+    padding: 0 15px;
 
     font-size: 12px;
 
@@ -387,9 +407,9 @@ h2 em {
 }
 
 
-/* =========================
-   HOME
-========================= */
+/* =========================================================
+   HOME — HERO
+========================================================= */
 
 .hero {
 
@@ -404,11 +424,11 @@ h2 em {
 .page-header h1,
 .science-hero h1 {
 
+    margin-bottom: 22px;
+
     font-size: 62px;
 
     line-height: .88;
-
-    margin-bottom: 22px;
 
 }
 
@@ -419,13 +439,13 @@ h2 em {
 
     max-width: 330px;
 
-    font-size: 16px;
-
-    line-height: 1.45;
+    margin-bottom: 25px;
 
     color: #35322e;
 
-    margin-bottom: 25px;
+    font-size: 16px;
+
+    line-height: 1.45;
 
 }
 
@@ -443,21 +463,21 @@ h2 em {
 
 .text-link {
 
-    font-weight: 800;
-
-    font-size: 13px;
+    padding-bottom: 3px;
 
     border-bottom:
         1px solid var(--ink);
 
-    padding-bottom: 3px;
+    font-size: 13px;
+
+    font-weight: 800;
 
 }
 
 
-/* =========================
+/* =========================================================
    IMAGENS
-========================= */
+========================================================= */
 
 .image-card {
 
@@ -511,6 +531,12 @@ h2 em {
 
     bottom: 18px;
 
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 6px;
+
     padding: 18px;
 
     border-radius: 20px;
@@ -520,12 +546,6 @@ h2 em {
 
     color: white;
 
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 6px;
-
 }
 
 
@@ -533,9 +553,9 @@ h2 em {
 
     font-size: 9px;
 
-    text-transform: uppercase;
-
     letter-spacing: .13em;
+
+    text-transform: uppercase;
 
     opacity: .65;
 
@@ -546,6 +566,7 @@ h2 em {
 
     font-family:
         "Playfair Display",
+        Georgia,
         serif;
 
     font-size: 29px;
@@ -555,9 +576,9 @@ h2 em {
 }
 
 
-/* =========================
-   ESCOLHAS
-========================= */
+/* =========================================================
+   HOME — ESCOLHAS
+========================================================= */
 
 .section {
 
@@ -570,9 +591,9 @@ h2 em {
 
 .section-heading h2 {
 
-    font-size: 37px;
-
     margin-bottom: 18px;
+
+    font-size: 37px;
 
 }
 
@@ -591,13 +612,9 @@ h2 em {
 
 .choice-card {
 
-    min-height: 215px;
-
-    padding: 18px;
-
-    border-radius: 23px;
-
     position: relative;
+
+    min-height: 215px;
 
     display: flex;
 
@@ -607,9 +624,13 @@ h2 em {
 
     overflow: hidden;
 
+    padding: 18px;
+
     border:
         1px solid
         rgba(17, 16, 15, .08);
+
+    border-radius: 23px;
 
 }
 
@@ -653,9 +674,9 @@ h2 em {
 
     right: 16px;
 
-    font-size: 30px;
-
     font-family: serif;
+
+    font-size: 30px;
 
 }
 
@@ -664,6 +685,7 @@ h2 em {
 
     font-family:
         "Playfair Display",
+        Georgia,
         serif;
 
     font-size: 25px;
@@ -675,11 +697,11 @@ h2 em {
 
 .choice-card small {
 
-    font-size: 11px;
+    margin-top: 5px;
 
     color: var(--muted);
 
-    margin-top: 5px;
+    font-size: 11px;
 
 }
 
@@ -688,28 +710,20 @@ h2 em {
 
     position: absolute;
 
-    bottom: 16px;
-
     right: 16px;
+
+    bottom: 16px;
 
     font-size: 18px;
 
 }
 
 
-/* =========================
+/* =========================================================
    FRASE
-========================= */
+========================================================= */
 
 .quote {
-
-    background: var(--ink);
-
-    color: white;
-
-    padding-top: 44px;
-
-    padding-bottom: 48px;
 
     min-height: 220px;
 
@@ -719,10 +733,20 @@ h2 em {
 
     justify-content: center;
 
+    padding-top: 44px;
+
+    padding-bottom: 48px;
+
+    background: var(--ink);
+
+    color: white;
+
 }
 
 
 .quote-mark {
+
+    color: var(--yellow);
 
     font-family: Georgia, serif;
 
@@ -730,37 +754,32 @@ h2 em {
 
     line-height: .55;
 
-    color: var(--yellow);
-
 }
 
 
 .quote p {
 
+    max-width: 330px;
+
+    margin: 8px 0 0;
+
     font-family:
         "Playfair Display",
+        Georgia,
         serif;
 
     font-size: 29px;
 
     line-height: 1.02;
 
-    margin: 8px 0 0;
-
-    max-width: 330px;
-
 }
 
 
-/* =========================
+/* =========================================================
    FOOTER
-========================= */
+========================================================= */
 
 .footer {
-
-    background: var(--paper);
-
-    padding: 22px;
 
     display: flex;
 
@@ -769,6 +788,10 @@ h2 em {
     justify-content: space-between;
 
     gap: 20px;
+
+    padding: 22px;
+
+    background: var(--paper);
 
 }
 
@@ -794,25 +817,25 @@ h2 em {
 .footer span,
 .footer a {
 
-    font-size: 10px;
-
     color: var(--muted);
+
+    font-size: 10px;
 
 }
 
 
 .footer a {
 
-    font-weight: 800;
-
     color: var(--ink);
+
+    font-weight: 800;
 
 }
 
 
-/* =========================
-   CARDÁPIO
-========================= */
+/* =========================================================
+   CARDÁPIO — HEADER
+========================================================= */
 
 .page-header {
 
@@ -830,6 +853,10 @@ h2 em {
 }
 
 
+/* =========================================================
+   BUSCA
+========================================================= */
+
 .filters {
 
     padding-bottom: 22px;
@@ -841,25 +868,24 @@ h2 em {
 
     height: 50px;
 
-    border-radius: 15px;
-
-    background:
-        rgba(255, 253, 248, .76);
-
     display: flex;
 
     align-items: center;
-
-    padding:
-        0 15px;
 
     gap: 9px;
 
     margin-bottom: 12px;
 
+    padding: 0 15px;
+
     border:
         1px solid
         rgba(17, 16, 15, .09);
+
+    border-radius: 15px;
+
+    background:
+        rgba(255, 253, 248, .76);
 
 }
 
@@ -881,7 +907,16 @@ h2 em {
 
     background: transparent;
 
+    color: var(--ink);
+
     font-size: 14px;
+
+}
+
+
+.search-wrap input::placeholder {
+
+    color: #777;
 
 }
 
@@ -910,16 +945,17 @@ h2 em {
 
 .chip {
 
+    padding: 9px 13px;
+
     border:
         1px solid
         rgba(17, 16, 15, .17);
 
+    border-radius: 99px;
+
     background: transparent;
 
-    padding:
-        9px 13px;
-
-    border-radius: 99px;
+    color: var(--ink);
 
     font-size: 11px;
 
@@ -930,18 +966,18 @@ h2 em {
 
 .chip.active {
 
+    border-color: var(--ink);
+
     background: var(--ink);
 
-    color: #fff;
-
-    border-color: var(--ink);
+    color: white;
 
 }
 
 
-/* =========================
-   CARDS
-========================= */
+/* =========================================================
+   CARDS DO CARDÁPIO
+========================================================= */
 
 .menu-list {
 
@@ -958,11 +994,11 @@ h2 em {
 
 .menu-card {
 
+    overflow: hidden;
+
     border-radius: 26px;
 
     background: var(--paper);
-
-    overflow: hidden;
 
     box-shadow:
         0 10px 35px
@@ -990,9 +1026,9 @@ h2 em {
 
     display: flex;
 
-    justify-content: space-between;
-
     align-items: center;
+
+    justify-content: space-between;
 
     margin-bottom: 8px;
 
@@ -1003,8 +1039,7 @@ h2 em {
 
     display: inline-flex;
 
-    padding:
-        6px 9px;
+    padding: 6px 9px;
 
     border-radius: 99px;
 
@@ -1021,36 +1056,36 @@ h2 em {
 
 .price {
 
+    color: #999;
+
     font-size: 10px;
 
     font-weight: 800;
-
-    color: #999;
 
 }
 
 
 .menu-card h2 {
 
+    margin:
+        4px 0 8px;
+
     font-size: 31px;
 
     line-height: 1;
-
-    margin:
-        4px 0 8px;
 
 }
 
 
 .menu-card p {
 
-    font-size: 12px;
-
-    line-height: 1.45;
+    margin-bottom: 15px;
 
     color: var(--muted);
 
-    margin-bottom: 15px;
+    font-size: 12px;
+
+    line-height: 1.45;
 
 }
 
@@ -1059,14 +1094,14 @@ h2 em {
 
     display: none;
 
-    text-align: center;
-
     padding:
         30px 20px 55px;
 
+    color: var(--muted);
+
     font-size: 13px;
 
-    color: var(--muted);
+    text-align: center;
 
 }
 
@@ -1078,17 +1113,17 @@ h2 em {
 }
 
 
-/* =========================
-   SOBRE
-========================= */
+/* =========================================================
+   PÁGINA SOBRE
+========================================================= */
 
 .science-hero {
+
+    position: relative;
 
     padding-top: 42px;
 
     padding-bottom: 20px;
-
-    position: relative;
 
 }
 
@@ -1109,7 +1144,17 @@ h2 em {
 }
 
 
+/* =========================================================
+   MOLÉCULA
+========================================================= */
+
 .molecule {
+
+    position: absolute;
+
+    top: 30px;
+
+    right: 25px;
 
     width: 96px;
 
@@ -1120,12 +1165,6 @@ h2 em {
         rgba(17, 16, 15, .22);
 
     border-radius: 50%;
-
-    position: absolute;
-
-    right: 25px;
-
-    top: 30px;
 
     opacity: .8;
 
@@ -1178,43 +1217,52 @@ h2 em {
 
 .molecule span:nth-child(1) {
 
-    left: 43px;
     top: 0;
+
+    left: 43px;
 
 }
 
 
 .molecule span:nth-child(2) {
 
-    right: 0;
     top: 44px;
+
+    right: 0;
 
 }
 
 
 .molecule span:nth-child(3) {
 
-    left: 42px;
     bottom: 0;
+
+    left: 42px;
 
 }
 
 
 .molecule span:nth-child(4) {
 
-    left: 0;
     top: 44px;
+
+    left: 0;
 
 }
 
 
 .molecule span:nth-child(5) {
 
-    left: 44px;
     top: 44px;
+
+    left: 44px;
 
 }
 
+
+/* =========================================================
+   FOTO SOBRE
+========================================================= */
 
 .science-photo {
 
@@ -1232,51 +1280,59 @@ h2 em {
 }
 
 
-.definition {
+/* =========================================================
+   DEFINIÇÃO
+========================================================= */
 
-    background: var(--cream);
+.definition {
 
     padding-top: 34px;
 
     padding-bottom: 34px;
+
+    background: var(--cream);
 
 }
 
 
 .definition .number {
 
+    margin-bottom: 14px;
+
     font-size: 10px;
 
     font-weight: 800;
-
-    margin-bottom: 14px;
 
 }
 
 
 .definition h2 {
 
+    margin-bottom: 14px;
+
     font-size: 35px;
 
     line-height: .95;
-
-    margin-bottom: 14px;
 
 }
 
 
 .definition p {
 
+    margin-bottom: 0;
+
+    color: #514d48;
+
     font-size: 14px;
 
     line-height: 1.55;
 
-    color: #514d48;
-
-    margin-bottom: 0;
-
 }
 
+
+/* =========================================================
+   DNA / RNA
+========================================================= */
 
 .fact-grid {
 
@@ -1296,13 +1352,13 @@ h2 em {
 
 .fact-grid article {
 
-    background: var(--paper);
+    min-height: 170px;
 
     padding: 18px;
 
     border-radius: 21px;
 
-    min-height: 170px;
+    background: var(--paper);
 
 }
 
@@ -1320,44 +1376,49 @@ h2 em {
 
 .fact-grid h3 {
 
+    margin:
+        26px 0 5px;
+
     font-family:
         "Playfair Display",
+        Georgia,
         serif;
 
     font-size: 24px;
-
-    margin:
-        26px 0 5px;
 
 }
 
 
 .fact-grid p {
 
+    color: var(--muted);
+
     font-size: 11px;
 
     line-height: 1.4;
 
-    color: var(--muted);
-
 }
 
 
+/* =========================================================
+   CTA
+========================================================= */
+
 .cta-card {
-
-    background: var(--ink);
-
-    color: #fff;
-
-    padding-top: 30px;
-
-    padding-bottom: 30px;
 
     display: flex;
 
     flex-direction: column;
 
     gap: 20px;
+
+    padding-top: 30px;
+
+    padding-bottom: 30px;
+
+    background: var(--ink);
+
+    color: white;
 
 }
 
@@ -1372,33 +1433,33 @@ h2 em {
 
 .cta-card h2 {
 
-    font-size: 37px;
-
     margin-bottom: 8px;
+
+    font-size: 37px;
 
 }
 
 
 .cta-card p {
 
-    font-size: 13px;
+    margin-bottom: 0;
 
     color: #bbb;
 
-    margin-bottom: 0;
+    font-size: 13px;
 
 }
 
 
-/* =========================
+/* =========================================================
    RECEITA
-========================= */
+========================================================= */
 
 .recipe-hero {
 
-    height: 330px;
-
     position: relative;
+
+    height: 330px;
 
 }
 
@@ -1414,19 +1475,19 @@ h2 em {
 
     position: absolute;
 
-    left: 18px;
-
     top: 18px;
+
+    left: 18px;
 
     width: 44px;
 
     height: 44px;
 
-    border-radius: 50%;
-
     display: grid;
 
     place-items: center;
+
+    border-radius: 50%;
 
     background:
         rgba(255, 253, 248, .9);
@@ -1440,39 +1501,43 @@ h2 em {
 
 .recipe-content {
 
-    background: var(--paper);
-
     padding-top: 24px;
 
     padding-bottom: 42px;
+
+    background: var(--paper);
 
 }
 
 
 .recipe-content h1 {
 
+    margin:
+        8px 0 12px;
+
     font-size: 55px;
 
     line-height: .9;
-
-    margin:
-        8px 0 12px;
 
 }
 
 
 .lead {
 
+    margin-bottom: 20px;
+
+    color: var(--muted);
+
     font-size: 14px;
 
     line-height: 1.55;
 
-    color: var(--muted);
-
-    margin-bottom: 20px;
-
 }
 
+
+/* =========================================================
+   INFORMAÇÕES DA RECEITA
+========================================================= */
 
 .info-strip {
 
@@ -1481,13 +1546,13 @@ h2 em {
     grid-template-columns:
         repeat(3, 1fr);
 
-    background: var(--cream);
-
-    border-radius: 18px;
+    margin-bottom: 28px;
 
     padding: 13px 8px;
 
-    margin-bottom: 28px;
+    border-radius: 18px;
+
+    background: var(--cream);
 
 }
 
@@ -1511,20 +1576,20 @@ h2 em {
 
 .info-strip div:last-child {
 
-    border: 0;
+    border-right: 0;
 
 }
 
 
 .info-strip span {
 
-    text-transform: uppercase;
-
-    letter-spacing: .1em;
+    color: #999;
 
     font-size: 8px;
 
-    color: #999;
+    letter-spacing: .1em;
+
+    text-transform: uppercase;
 
 }
 
@@ -1536,10 +1601,13 @@ h2 em {
 }
 
 
+/* =========================================================
+   INGREDIENTES / PREPARO
+========================================================= */
+
 .recipe-section {
 
-    padding:
-        0 0 25px;
+    padding-bottom: 25px;
 
 }
 
@@ -1563,14 +1631,14 @@ h2 em {
 
 .recipe-section li {
 
-    font-size: 13px;
-
-    line-height: 1.5;
-
     padding: 8px 0;
 
     border-bottom:
         1px solid var(--line);
+
+    font-size: 13px;
+
+    line-height: 1.5;
 
 }
 
@@ -1582,9 +1650,76 @@ h2 em {
 }
 
 
-/* =========================
-   MOBILE
-========================= */
+/* =========================================================
+   RESPONSIVO
+========================================================= */
+
+@media (max-width: 390px) {
+
+    .brand span:last-child {
+
+        display: none;
+
+    }
+
+
+    .menu-toggle {
+
+        display: block;
+
+    }
+
+
+    .nav {
+
+        position: absolute;
+
+        top: 65px;
+
+        right: 12px;
+
+        left: 12px;
+
+        display: none;
+
+        flex-direction: column;
+
+        gap: 0;
+
+        padding: 10px;
+
+        border-radius: 18px;
+
+        background: var(--paper);
+
+        box-shadow: var(--shadow);
+
+    }
+
+
+    .nav.open {
+
+        display: flex;
+
+    }
+
+
+    .nav a {
+
+        padding:
+            13px 14px;
+
+    }
+
+
+    .nav a.active::after {
+
+        display: none;
+
+    }
+
+}
+
 
 @media (max-width: 380px) {
 
@@ -1633,10 +1768,10 @@ h2 em {
 
     .app-shell {
 
-        border-radius: 36px;
-
         min-height:
             calc(100vh - 48px);
+
+        border-radius: 36px;
 
     }
 
@@ -1646,77 +1781,6 @@ h2 em {
         border-top-left-radius: 36px;
 
         border-top-right-radius: 36px;
-
-    }
-
-}
-
-
-/* =========================
-   MENU MOBILE
-========================= */
-
-@media (max-width: 390px) {
-
-    .brand span:last-child {
-
-        display: none;
-
-    }
-
-
-    .menu-toggle {
-
-        display: block;
-
-    }
-
-
-    .nav {
-
-        display: none;
-
-        position: absolute;
-
-        left: 12px;
-
-        right: 12px;
-
-        top: 65px;
-
-        background: var(--paper);
-
-        padding: 10px;
-
-        border-radius: 18px;
-
-        box-shadow: var(--shadow);
-
-        flex-direction: column;
-
-        gap: 0;
-
-    }
-
-
-    .nav.open {
-
-        display: flex;
-
-    }
-
-
-    .nav a {
-
-        padding:
-            13px 14px;
-
-    }
-
-
-    .nav a.active::after {
-
-        display: none;
 
     }
 
