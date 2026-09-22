@@ -9,310 +9,345 @@
         name="viewport"
         content="width=device-width, initial-scale=1.0">
 
-    <title>Receita — Núcleo</title>
+    <title>Receita | Núcleo</title>
 
-    <meta
-        name="description"
-        content="Detalhes das receitas do Núcleo.">
-
-    <link
-        rel="preconnect"
-        href="https://fonts.googleapis.com">
-
-    <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@700;800&display=swap"
         rel="stylesheet">
 
-    <link
-        rel="stylesheet"
-        href="style.css">
+    <link rel="stylesheet" href="./style.css">
 
 </head>
 
 <body>
 
-    <main class="app-shell">
+<main class="app-shell">
 
 
-        <!-- ================= HEADER ================= -->
+    <!-- HEADER -->
 
-        <header class="topbar">
+    <header class="topbar">
 
-            <a
-                href="index.html"
-                class="brand">
+        <a href="index.html" class="brand">
 
-                <span class="brand-mark">
-                    N
-                </span>
+            <span class="brand-mark">
+                N
+            </span>
 
-                <span>
-                    Núcleo
-                </span>
+            <span>
+                Núcleo
+            </span>
 
+        </a>
+
+
+        <button
+            class="menu-toggle"
+            type="button"
+            aria-label="Abrir menu"
+            aria-expanded="false">
+
+            ☰
+
+        </button>
+
+
+        <nav class="nav">
+
+            <a href="index.html">
+                Home
             </a>
 
-
-            <button
-                class="menu-toggle"
-                type="button"
-                aria-label="Abrir menu"
-                aria-expanded="false">
-
-                ☰
-
-            </button>
-
-
-            <nav class="nav">
-
-                <a href="index.html">
-                    Home
-                </a>
-
-                <a
-                    href="cardapio.html"
-                    class="active">
-
-                    Cardápio
-
-                </a>
-
-                <a href="sobre.html">
-                    O que são
-                </a>
-
-            </nav>
-
-        </header>
-
-
-        <!-- ================= IMAGEM ================= -->
-
-        <section class="recipe-hero">
-
-            <img
-                id="recipe-image"
-                src="https://images.unsplash.com/photo-1579871494447-9811cf80d66c?auto=format&fit=crop&w=1000&q=85"
-                alt="Sushi">
-
-
-            <a
-                href="cardapio.html"
-                class="back-button"
-                aria-label="Voltar">
-
-                ←
-
+            <a href="cardapio.html" class="active">
+                Cardápio
             </a>
 
-        </section>
-
-
-        <!-- ================= CONTEÚDO ================= -->
-
-        <section class="recipe-content page-pad">
-
-
-            <div class="card-top">
-
-                <span
-                    class="tag"
-                    id="recipe-tag">
-
-                    PROTEÍNA
-
-                </span>
-
-
-                <span
-                    class="price"
-                    id="recipe-number">
-
-                    01
-
-                </span>
-
-            </div>
-
-
-            <h1 id="recipe-title">
-                Sushi
-            </h1>
-
-
-            <p
-                class="lead"
-                id="recipe-description">
-
-                Com muito sabor e um toque fresco,
-                uma combinação que mostra como diferentes
-                nutrientes podem dividir o mesmo prato.
-
-            </p>
-
-
-            <!-- ================= INFO ================= -->
-
-            <div class="info-strip">
-
-
-                <div>
-
-                    <span>
-                        tempo
-                    </span>
-
-                    <strong id="recipe-time">
-                        25 min
-                    </strong>
-
-                </div>
-
-
-                <div>
-
-                    <span>
-                        nível
-                    </span>
-
-                    <strong>
-                        fácil
-                    </strong>
-
-                </div>
-
-
-                <div>
-
-                    <span>
-                        porção
-                    </span>
-
-                    <strong>
-                        2 pessoas
-                    </strong>
-
-                </div>
-
-
-            </div>
-
-
-            <!-- ================= INGREDIENTES ================= -->
-
-            <div class="recipe-section">
-
-                <span class="eyebrow">
-                    ingredientes
-                </span>
-
-
-                <ul id="ingredients">
-
-                    <li>
-                        Arroz para sushi
-                    </li>
-
-                    <li>
-                        Peixe fresco
-                    </li>
-
-                    <li>
-                        Alga nori
-                    </li>
-
-                    <li>
-                        Gergelim
-                    </li>
-
-                    <li>
-                        Molho de soja
-                    </li>
-
-                </ul>
-
-            </div>
-
-
-            <!-- ================= PREPARO ================= -->
-
-            <div class="recipe-section">
-
-                <span class="eyebrow">
-                    como fazer
-                </span>
-
-
-                <ol id="steps">
-
-                    <li>
-                        Prepare o arroz até ficar macio
-                        e levemente pegajoso.
-                    </li>
-
-                    <li>
-                        Monte as folhas de nori e distribua
-                        o arroz em uma camada fina.
-                    </li>
-
-                    <li>
-                        Adicione o recheio, enrole com cuidado
-                        e corte em pedaços.
-                    </li>
-
-                </ol>
-
-            </div>
-
-
-            <a
-                href="cardapio.html"
-                class="btn btn-yellow full">
-
-                Voltar ao cardápio
-
-                <span>
-                    →
-                </span>
-
+            <a href="sobre.html">
+                O que são
             </a>
 
-        </section>
+        </nav>
+
+    </header>
 
 
-        <!-- ================= FOOTER ================= -->
+    <!-- IMAGEM -->
 
-        <footer class="footer">
+    <section class="recipe-hero">
+
+        <img
+            id="recipe-image"
+            src=""
+            alt="Receita">
+
+        <a
+            href="cardapio.html"
+            class="back-button"
+            aria-label="Voltar">
+
+            ←
+
+        </a>
+
+    </section>
+
+
+    <!-- CONTEÚDO -->
+
+    <section class="recipe-content page-pad">
+
+        <div class="card-top">
+
+            <span
+                class="tag"
+                id="recipe-tag">
+                PRATO
+            </span>
+
+            <span
+                class="price"
+                id="recipe-number">
+                01
+            </span>
+
+        </div>
+
+
+        <h1 id="recipe-title">
+            Receita
+        </h1>
+
+
+        <p
+            class="lead"
+            id="recipe-description">
+            Carregando receita...
+        </p>
+
+
+        <!-- INFORMAÇÕES -->
+
+        <div class="info-strip">
 
             <div>
 
-                <strong>
-                    Núcleo
-                </strong>
-
                 <span>
-                    informação que dá fome.
+                    tempo
                 </span>
+
+                <strong id="recipe-time">
+                    -
+                </strong>
 
             </div>
 
 
-            <a href="index.html">
-                Início →
-            </a>
+            <div>
 
-        </footer>
+                <span>
+                    calorias
+                </span>
 
-    </main>
+                <strong id="recipe-calories">
+                    -
+                </strong>
+
+            </div>
 
 
-    <script src="app.js"></script>
+            <div>
+
+                <span>
+                    porção
+                </span>
+
+                <strong>
+                    1 pessoa
+                </strong>
+
+            </div>
+
+        </div>
+
+
+        <!-- NUTRIENTES -->
+
+        <div class="nutrition-box">
+
+            <span class="eyebrow">
+                informações nutricionais
+            </span>
+
+            <div class="nutrition-grid">
+
+                <div>
+                    <strong id="nutrition-protein">
+                        -
+                    </strong>
+                    <span>
+                        proteína
+                    </span>
+                </div>
+
+                <div>
+                    <strong id="nutrition-carb">
+                        -
+                    </strong>
+                    <span>
+                        carboidrato
+                    </span>
+                </div>
+
+                <div>
+                    <strong id="nutrition-fat">
+                        -
+                    </strong>
+                    <span>
+                        gordura
+                    </span>
+                </div>
+
+            </div>
+
+            <small>
+                Valores aproximados por porção.
+                Podem variar conforme os ingredientes utilizados.
+            </small>
+
+        </div>
+
+
+        <!-- INGREDIENTES -->
+
+        <div class="recipe-section">
+
+            <span class="eyebrow">
+                ingredientes
+            </span>
+
+            <ul id="ingredients"></ul>
+
+        </div>
+
+
+        <!-- PREPARO -->
+
+        <div class="recipe-section">
+
+            <span class="eyebrow">
+                modo de preparo
+            </span>
+
+            <ol id="steps"></ol>
+
+        </div>
+
+
+        <!-- RELAÇÃO COM O TEMA -->
+
+        <div class="theme-box">
+
+            <span class="eyebrow">
+                relação com o tema
+            </span>
+
+            <p id="recipe-theme">
+                -
+            </p>
+
+        </div>
+
+
+        <!-- CUIDADOS -->
+
+        <div class="care-box">
+
+            <span class="eyebrow">
+                cuidados no consumo
+            </span>
+
+            <p id="recipe-care">
+                -
+            </p>
+
+        </div>
+
+
+        <!-- QR CODE -->
+
+        <div class="qr-box">
+
+            <div>
+
+                <span class="eyebrow">
+                    QR CODE
+                </span>
+
+                <h2>
+                    Leve essa receita
+                    <br>
+                    com você.
+                </h2>
+
+                <p>
+                    Aponte a câmera do celular
+                    para acessar esta receita.
+                </p>
+
+            </div>
+
+            <img
+                id="recipe-qr"
+                src=""
+                alt="QR Code da receita">
+
+        </div>
+
+
+        <a
+            href="cardapio.html"
+            class="btn btn-yellow full">
+
+            Voltar ao cardápio
+
+            <span>
+                →
+            </span>
+
+        </a>
+
+    </section>
+
+
+    <!-- FOOTER -->
+
+    <footer class="footer">
+
+        <div>
+
+            <strong>
+                Núcleo
+            </strong>
+
+            <span>
+                Ácido nucleico • Café da tarde
+            </span>
+
+        </div>
+
+        <a href="index.html">
+            Início →
+        </a>
+
+    </footer>
+
+</main>
+
+
+<script src="./app.js"></script>
 
 </body>
 
