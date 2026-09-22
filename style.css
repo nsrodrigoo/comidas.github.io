@@ -1,7 +1,3 @@
-/* =========================================================
-   RESET
-========================================================= */
-
 * {
     margin: 0;
     padding: 0;
@@ -13,16 +9,9 @@ html {
 }
 
 body {
-    min-height: 100vh;
     background: #dfe2e4;
     color: #11100f;
     font-family: "DM Sans", Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-}
-
-img {
-    display: block;
-    max-width: 100%;
 }
 
 a {
@@ -30,106 +19,79 @@ a {
     text-decoration: none;
 }
 
-button {
-    font-family: inherit;
+img {
+    display: block;
+    width: 100%;
 }
-
-
-/* =========================================================
-   VARIÁVEIS
-========================================================= */
 
 :root {
     --yellow: #ffd52f;
-    --yellow-dark: #f1c500;
-
     --black: #11100f;
     --white: #fffdf8;
-
-    --cream: #f7f2e9;
-    --gray: #68645f;
-    --light-gray: #e8e5df;
-
-    --radius-small: 12px;
-    --radius-medium: 22px;
-    --radius-large: 30px;
+    --cream: #f4f0e8;
+    --gray: #68645e;
 }
 
 
-/* =========================================================
-   ESTRUTURA PRINCIPAL
-========================================================= */
+/* =========================
+   ESTRUTURA
+========================= */
 
 .app-shell {
     width: 100%;
     max-width: 480px;
     min-height: 100vh;
     margin: 0 auto;
-    overflow: hidden;
     background: var(--yellow);
-}
-
-.page-pad {
-    padding-left: 21px;
-    padding-right: 21px;
+    overflow: hidden;
 }
 
 
-/* =========================================================
-   HEADER
-========================================================= */
+/* =========================
+   MENU
+========================= */
 
 .topbar {
-    position: relative;
-    z-index: 20;
-
-    width: 100%;
-    min-height: 70px;
+    height: 49px;
+    padding: 0 19px;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    padding: 0 21px;
-
     background: var(--white);
 }
-
-
-/* LOGO */
 
 .brand {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 7px;
 
-    font-size: 15px;
+    font-size: 11px;
     font-weight: 700;
 }
 
 .brand-mark {
-    width: 27px;
-    height: 27px;
+    width: 24px;
+    height: 24px;
 
-    display: grid;
-    place-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     border-radius: 50%;
 
     background: var(--black);
     color: var(--yellow);
 
-    font-family: "Playfair Display", Georgia, serif;
-    font-size: 16px;
+    font-family: Georgia, serif;
+    font-size: 13px;
 }
-
-
-/* MENU DESKTOP */
 
 .nav {
     display: flex;
     align-items: center;
-    gap: 20px;
+    gap: 17px;
 }
 
 .nav a {
@@ -137,14 +99,7 @@ button {
 
     color: #77736d;
 
-    font-size: 12px;
-    font-weight: 500;
-
-    transition: color .2s ease;
-}
-
-.nav a:hover {
-    color: var(--black);
+    font-size: 10px;
 }
 
 .nav a.active {
@@ -156,7 +111,6 @@ button {
     content: "";
 
     position: absolute;
-
     left: 0;
     right: 0;
     bottom: -7px;
@@ -167,42 +121,31 @@ button {
 }
 
 
-/* BOTÃO MENU */
+/* =========================
+   ESPAÇAMENTO
+========================= */
 
-.menu-toggle {
-    display: none;
-
-    width: 38px;
-    height: 38px;
-
-    border: 0;
-    border-radius: 50%;
-
-    background: var(--black);
-    color: var(--white);
-
-    font-size: 20px;
-
-    cursor: pointer;
+.page-pad {
+    padding-left: 19px;
+    padding-right: 19px;
 }
 
 
-/* =========================================================
-   TEXTOS GERAIS
-========================================================= */
+/* =========================
+   TEXTOS
+========================= */
 
 .eyebrow {
     display: block;
 
-    margin-bottom: 13px;
+    margin-bottom: 12px;
 
     color: rgba(17, 16, 15, .65);
 
-    font-size: 9px;
-    font-weight: 800;
+    font-size: 8px;
+    font-weight: 700;
 
     letter-spacing: .13em;
-    text-transform: uppercase;
 }
 
 h1,
@@ -211,537 +154,237 @@ h3 {
     font-family: "Playfair Display", Georgia, serif;
 }
 
-p {
-    line-height: 1.5;
-}
 
+/* =========================
+   CABEÇALHO DO CARDÁPIO
+========================= */
 
-/* =========================================================
-   BOTÕES
-========================================================= */
-
-.btn {
-    min-height: 50px;
-
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 25px;
-
-    padding: 0 18px;
-
-    border-radius: 15px;
-
-    font-size: 12px;
-    font-weight: 700;
-
-    transition:
-        transform .2s ease,
-        box-shadow .2s ease,
-        background .2s ease;
-}
-
-.btn:hover {
-    transform: translateY(-2px);
-}
-
-.btn span {
-    font-size: 17px;
-    font-weight: 400;
-}
-
-.btn-dark {
-    background: var(--black);
-    color: white;
-
-    box-shadow: 0 10px 22px rgba(0, 0, 0, .12);
-}
-
-.btn-dark:hover {
-    box-shadow: 0 13px 25px rgba(0, 0, 0, .18);
-}
-
-.btn-yellow {
-    background: var(--yellow);
-    color: var(--black);
-}
-
-.btn-small {
-    min-height: 43px;
-
-    padding: 0 16px;
-
-    border-radius: 12px;
-
-    font-size: 11px;
-}
-
-.btn.full {
-    width: 100%;
-}
-
-
-/* LINK */
-
-.text-link {
-    position: relative;
-
-    font-size: 11px;
-    font-weight: 700;
-}
-
-.text-link::after {
-    content: "";
-
-    position: absolute;
-
-    left: 0;
-    right: 0;
-    bottom: -5px;
-
-    height: 1px;
-
-    background: currentColor;
-}
-
-
-/* =========================================================
-   HOME — HERO
-========================================================= */
-
-.hero {
-    padding-top: 47px;
+.page-header {
+    padding-top: 39px;
     padding-bottom: 34px;
 }
 
-.hero h1 {
-    max-width: 360px;
-
-    margin-bottom: 15px;
-
-    font-size: clamp(52px, 14vw, 70px);
-    line-height: .84;
-    letter-spacing: -.055em;
-}
-
-.hero h1 em {
-    font-style: normal;
-}
-
-.hero p {
-    max-width: 330px;
-
-    margin-bottom: 25px;
-
-    color: rgba(17, 16, 15, .78);
-
-    font-size: 15px;
-    line-height: 1.52;
-}
-
-.hero-actions {
-    display: flex;
-    align-items: center;
-    gap: 22px;
-}
-
-.hero-actions .btn {
-    min-width: 185px;
-}
-
-
-/* =========================================================
-   IMAGEM PRINCIPAL
-========================================================= */
-
-.feature-image {
-    padding-bottom: 45px;
-}
-
-.image-card {
-    position: relative;
-
-    width: 100%;
-
-    overflow: hidden;
-
-    border-radius: 29px;
-
-    background: #ddd;
-}
-
-.image-card.tall {
-    height: 410px;
-}
-
-.image-card img {
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-}
-
-.image-overlay {
-    position: absolute;
-
-    left: 17px;
-    right: 17px;
-    bottom: 17px;
-
-    padding: 17px;
-
-    border-radius: 20px;
-
-    background: rgba(10, 10, 9, .79);
-    color: white;
-
-    backdrop-filter: blur(8px);
-}
-
-.image-overlay span {
-    display: block;
-
-    margin-bottom: 7px;
-
-    color: rgba(255, 255, 255, .6);
-
-    font-size: 8px;
-    font-weight: 800;
-
-    letter-spacing: .1em;
-    text-transform: uppercase;
-}
-
-.image-overlay strong {
-    display: block;
-
-    font-family: "Playfair Display", Georgia, serif;
-
-    font-size: 25px;
-    line-height: .98;
-}
-
-
-/* =========================================================
-   SEÇÕES
-========================================================= */
-
-.section {
-    padding-top: 45px;
-    padding-bottom: 45px;
-
-    background: var(--cream);
-}
-
-.section-heading h2 {
-    margin-bottom: 25px;
-
-    font-size: 42px;
-    line-height: .92;
-    letter-spacing: -.04em;
-}
-
-
-/* =========================================================
-   CARDS DE INFORMAÇÃO
-========================================================= */
-
-.info-cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-}
-
-.info-card {
-    position: relative;
-
-    min-height: 190px;
-
-    padding: 20px;
-
-    border-radius: 24px;
-
-    background: var(--white);
-}
-
-.info-number {
-    display: block;
-
-    margin-bottom: 35px;
-
-    color: var(--gray);
-
-    font-size: 9px;
-    font-weight: 800;
-
-    opacity: .55;
-}
-
-.info-card h3 {
-    margin-bottom: 7px;
-
-    font-size: 28px;
-    line-height: 1;
-}
-
-.info-card p {
-    color: var(--gray);
-
-    font-size: 11px;
-    line-height: 1.45;
-}
-
-
-/* =========================================================
-   PREVIEW DO CARDÁPIO
-========================================================= */
-
-.menu-preview {
-    padding-top: 47px;
-    padding-bottom: 50px;
-
-    background: var(--black);
-    color: white;
-}
-
-.menu-preview .eyebrow {
-    color: rgba(255, 255, 255, .5);
-}
-
-.menu-preview h2 {
+.page-header h1 {
     margin-bottom: 16px;
 
-    font-size: 45px;
-    line-height: .9;
-    letter-spacing: -.04em;
-}
-
-.menu-preview p {
-    max-width: 290px;
-
-    margin-bottom: 24px;
-
-    color: #bdb9b2;
-
-    font-size: 13px;
-    line-height: 1.5;
-}
-
-
-/* =========================================================
-   FRASES PARA PAINEL
-========================================================= */
-
-.panel-section {
-    padding-top: 43px;
-    padding-bottom: 43px;
-
-    background: var(--cream);
-}
-
-.panel-phrase {
-    margin-top: 12px;
-
-    padding: 20px;
-
-    border-radius: 20px;
-
-    background: var(--white);
-
-    font-family: "Playfair Display", Georgia, serif;
-
-    font-size: 18px;
-    line-height: 1.18;
-}
-
-
-/* =========================================================
-   FOOTER
-========================================================= */
-
-.footer {
-    min-height: 85px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    padding: 18px 21px;
-
-    background: var(--black);
-    color: white;
-}
-
-.footer div {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-}
-
-.footer strong {
-    font-family: "Playfair Display", Georgia, serif;
-    font-size: 19px;
-}
-
-.footer span {
-    color: #88837c;
-    font-size: 8px;
-}
-
-.footer > a {
-    font-size: 10px;
-    font-weight: 700;
-}
-
-
-/* =========================================================
-   CABEÇALHO DE PÁGINAS
-========================================================= */
-
-.page-header {
-    padding-top: 48px;
-    padding-bottom: 35px;
-}
-
-.page-header h1 {
-    margin-bottom: 17px;
-
-    font-size: 57px;
-    line-height: .86;
+    font-size: 49px;
+    line-height: .84;
     letter-spacing: -.05em;
 }
 
-.page-header h1 em {
-    font-style: normal;
-}
-
 .page-header p {
-    max-width: 320px;
+    max-width: 310px;
 
-    color: rgba(17, 16, 15, .72);
+    color: rgba(17, 16, 15, .78);
 
-    font-size: 13px;
+    font-size: 12px;
     line-height: 1.5;
 }
 
 
-/* =========================================================
-   CARDÁPIO
-========================================================= */
+/* =========================
+   LISTA DE PRATOS
+========================= */
 
 .menu-list {
     display: flex;
     flex-direction: column;
-    gap: 22px;
+    gap: 13px;
 
-    padding-bottom: 30px;
+    padding-bottom: 25px;
 }
 
 
-/* CARD */
+/* =========================
+   CARD DO PRATO
+========================= */
 
 .menu-card {
     overflow: hidden;
 
-    border-radius: 27px;
+    border-radius: 21px;
 
     background: var(--white);
-
-    box-shadow: 0 12px 35px rgba(0, 0, 0, .08);
 }
 
 .menu-card > img {
     width: 100%;
-    height: 245px;
+    height: 157px;
 
     object-fit: cover;
 }
 
 .menu-card-body {
-    padding: 18px;
+    padding: 14px;
 }
 
 
-/* TOPO DO CARD */
+/* =========================
+   PARTE SUPERIOR DO CARD
+========================= */
 
 .card-top {
     display: flex;
     align-items: center;
     justify-content: space-between;
 
-    margin-bottom: 13px;
+    margin-bottom: 9px;
 }
 
 .tag {
-    display: inline-flex;
-    align-items: center;
+    padding: 5px 8px;
 
-    padding: 6px 9px;
-
-    border-radius: 100px;
+    border-radius: 50px;
 
     background: #eeeae2;
 
-    color: #5f5b55;
+    color: #625e57;
 
-    font-size: 8px;
-    font-weight: 800;
+    font-size: 7px;
+    font-weight: 700;
 
     letter-spacing: .08em;
 }
 
 .price {
-    color: #a09c95;
+    color: #99938b;
 
-    font-size: 10px;
-    font-weight: 800;
+    font-size: 8px;
 }
 
-.menu-card h2 {
-    margin-bottom: 7px;
 
-    font-size: 29px;
+/* =========================
+   NOME DO PRATO
+========================= */
+
+.menu-card h2 {
+    margin-bottom: 6px;
+
+    font-size: 25px;
     line-height: 1;
 }
 
 .menu-card p {
-    margin-bottom: 17px;
+    margin-bottom: 13px;
 
     color: var(--gray);
 
-    font-size: 11px;
-    line-height: 1.5;
+    font-size: 9px;
+    line-height: 1.45;
 }
 
 
-/* =========================================================
-   AVISO DO CARDÁPIO
-========================================================= */
+/* =========================
+   NUTRIENTES
+========================= */
+
+.food-nutrients {
+    margin-bottom: 13px;
+
+    padding: 11px;
+
+    border-radius: 14px;
+
+    background: var(--cream);
+}
+
+.nutrient-title {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #777169;
+
+    font-size: 7px;
+    font-weight: 700;
+
+    letter-spacing: .1em;
+}
+
+.nutrient-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.nutrient-list span {
+    padding: 5px 7px;
+
+    border-radius: 50px;
+
+    background: var(--white);
+
+    color: #4d4943;
+
+    font-size: 7px;
+}
+
+.nutrient-list span:last-child {
+    background: var(--black);
+    color: var(--yellow);
+}
+
+
+/* =========================
+   BOTÃO
+========================= */
+
+.btn {
+    min-height: 34px;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+
+    padding: 0 14px;
+
+    border-radius: 11px;
+
+    font-size: 9px;
+    font-weight: 700;
+}
+
+.btn-dark {
+    background: var(--black);
+    color: white;
+}
+
+.btn span {
+    font-size: 12px;
+}
+
+
+/* =========================
+   EXPLICAÇÃO DO ÁCIDO NUCLEICO
+========================= */
 
 .menu-note {
     display: flex;
     align-items: flex-start;
-    gap: 14px;
+    gap: 11px;
 
-    padding-top: 10px;
-    padding-bottom: 43px;
+    padding-top: 5px;
+    padding-bottom: 32px;
 }
 
 .menu-note > span {
-    width: 38px;
-    height: 38px;
+    width: 30px;
+    height: 30px;
 
     flex-shrink: 0;
 
-    display: grid;
-    place-items: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     border-radius: 50%;
 
     background: var(--black);
     color: var(--yellow);
 
-    font-size: 19px;
+    font-family: Georgia, serif;
+    font-size: 12px;
 }
 
 .menu-note strong {
@@ -749,783 +392,94 @@ p {
 
     margin-bottom: 4px;
 
-    font-size: 13px;
+    font-size: 10px;
 }
 
 .menu-note p {
-    margin: 0;
+    color: rgba(17, 16, 15, .68);
 
-    color: var(--gray);
-
-    font-size: 11px;
+    font-size: 9px;
     line-height: 1.45;
 }
 
 
-/* =========================================================
-   PÁGINA "O QUE SÃO"
-========================================================= */
+/* =========================
+   FOOTER
+========================= */
 
-.science-hero {
-    padding-top: 48px;
-    padding-bottom: 35px;
-}
+.footer {
+    min-height: 67px;
 
-.science-hero h1 {
-    margin-bottom: 18px;
-
-    font-size: 60px;
-    line-height: .84;
-    letter-spacing: -.05em;
-}
-
-.science-hero h1 em {
-    font-style: normal;
-}
-
-.science-hero p {
-    max-width: 335px;
-
-    color: rgba(17, 16, 15, .78);
-
-    font-size: 14px;
-    line-height: 1.55;
-}
-
-
-/* FOTO */
-
-.science-photo {
-    padding-bottom: 40px;
-}
-
-.science-photo .image-card {
-    height: 350px;
-}
-
-.science-photo img {
-    object-position: center;
-}
-
-
-/* DEFINIÇÕES */
-
-.definition {
-    padding-top: 42px;
-    padding-bottom: 42px;
-
-    background: var(--white);
-}
-
-.definition .number {
-    margin-bottom: 20px;
-
-    color: #aaa49b;
-
-    font-size: 10px;
-    font-weight: 800;
-}
-
-.definition h2 {
-    margin-bottom: 14px;
-
-    font-size: 52px;
-    line-height: .9;
-}
-
-.definition p {
-    color: var(--gray);
-
-    font-size: 13px;
-    line-height: 1.6;
-}
-
-.second-definition {
-    background: var(--yellow);
-}
-
-
-/* =========================================================
-   GRID DE FATOS
-========================================================= */
-
-.fact-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 10px;
-
-    padding-top: 25px;
-    padding-bottom: 45px;
-
-    background: var(--yellow);
-}
-
-.fact-grid article {
-    min-height: 165px;
-
-    padding: 17px;
-
-    border-radius: 20px;
-
-    background: rgba(255, 255, 255, .5);
-}
-
-.fact-grid span {
-    display: block;
-
-    margin-bottom: 30px;
-
-    font-size: 8px;
-    font-weight: 800;
-
-    letter-spacing: .08em;
-}
-
-.fact-grid h3 {
-    margin-bottom: 5px;
-
-    font-size: 27px;
-}
-
-.fact-grid p {
-    color: rgba(17, 16, 15, .65);
-
-    font-size: 10px;
-    line-height: 1.45;
-}
-
-
-/* =========================================================
-   CTA
-========================================================= */
-
-.cta-card {
-    padding-top: 45px;
-    padding-bottom: 45px;
-
-    background: var(--black);
-    color: white;
-}
-
-.cta-card .eyebrow {
-    color: rgba(255, 255, 255, .5);
-}
-
-.cta-card h2 {
-    margin-bottom: 9px;
-
-    font-size: 39px;
-    line-height: .95;
-}
-
-.cta-card p {
-    margin-bottom: 22px;
-
-    color: #aaa59d;
-
-    font-size: 12px;
-}
-
-
-/* =========================================================
-   PÁGINA DA RECEITA
-========================================================= */
-
-.recipe-hero {
-    position: relative;
-
-    width: 100%;
-    height: 310px;
-
-    overflow: hidden;
-}
-
-.recipe-hero img {
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-}
-
-
-/* BOTÃO VOLTAR */
-
-.back-button {
-    position: absolute;
-
-    top: 17px;
-    left: 17px;
-
-    width: 42px;
-    height: 42px;
-
-    display: grid;
-    place-items: center;
-
-    border-radius: 50%;
-
-    background: rgba(0, 0, 0, .65);
-    color: white;
-
-    font-size: 20px;
-
-    backdrop-filter: blur(5px);
-}
-
-
-/* CONTEÚDO */
-
-.recipe-content {
-    padding-top: 30px;
-    padding-bottom: 45px;
-
-    background: var(--white);
-}
-
-.recipe-content h1 {
-    margin-bottom: 12px;
-
-    font-size: 53px;
-    line-height: .88;
-    letter-spacing: -.04em;
-}
-
-.recipe-content .lead {
-    margin-bottom: 23px;
-
-    color: var(--gray);
-
-    font-size: 13px;
-    line-height: 1.55;
-}
-
-
-/* =========================================================
-   INFORMAÇÕES RÁPIDAS
-========================================================= */
-
-.info-strip {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 8px;
-
-    margin-bottom: 28px;
-}
-
-.info-strip div {
-    min-height: 76px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
-    padding: 12px;
-
-    border-radius: 16px;
-
-    background: var(--cream);
-}
-
-.info-strip span {
-    margin-bottom: 5px;
-
-    color: #8b867e;
-
-    font-size: 8px;
-    font-weight: 800;
-
-    letter-spacing: .06em;
-    text-transform: uppercase;
-}
-
-.info-strip strong {
-    font-family: "Playfair Display", Georgia, serif;
-
-    font-size: 16px;
-}
-
-
-/* =========================================================
-   NUTRIÇÃO
-========================================================= */
-
-.nutrition-box {
-    margin-bottom: 30px;
-
-    padding: 18px;
-
-    border-radius: 21px;
-
-    background: var(--yellow);
-}
-
-.nutrition-box .eyebrow {
-    margin-bottom: 14px;
-}
-
-.nutrition-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 8px;
-
-    margin-bottom: 13px;
-}
-
-.nutrition-grid div {
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
-}
-
-.nutrition-grid strong {
-    font-family: "Playfair Display", Georgia, serif;
-
-    font-size: 20px;
-}
-
-.nutrition-grid span {
-    color: rgba(17, 16, 15, .6);
-
-    font-size: 9px;
-
-    text-transform: uppercase;
-    letter-spacing: .05em;
-}
-
-.nutrition-box small {
-    display: block;
-
-    color: rgba(17, 16, 15, .6);
-
-    font-size: 9px;
-    line-height: 1.4;
-}
-
-
-/* =========================================================
-   SEÇÕES DA RECEITA
-========================================================= */
-
-.recipe-section {
-    margin-bottom: 32px;
-}
-
-.recipe-section .eyebrow {
-    margin-bottom: 13px;
-}
-
-
-/* LISTA INGREDIENTES */
-
-.recipe-section ul {
-    list-style: none;
-}
-
-.recipe-section ul li {
-    position: relative;
-
-    padding: 12px 0 12px 22px;
-
-    border-bottom: 1px solid #e8e4dc;
-
-    color: #4d4944;
-
-    font-size: 12px;
-    line-height: 1.45;
-}
-
-.recipe-section ul li::before {
-    content: "•";
-
-    position: absolute;
-
-    left: 3px;
-    top: 11px;
-
-    color: var(--black);
-
-    font-size: 18px;
-}
-
-
-/* PASSOS */
-
-.recipe-section ol {
-    list-style: none;
-
-    counter-reset: steps;
-}
-
-.recipe-section ol li {
-    position: relative;
-
-    min-height: 45px;
-
-    padding: 3px 0 15px 39px;
-
-    color: #4d4944;
-
-    font-size: 12px;
-    line-height: 1.5;
-
-    counter-increment: steps;
-}
-
-.recipe-section ol li::before {
-    content: counter(steps);
-
-    position: absolute;
-
-    left: 0;
-    top: 0;
-
-    width: 27px;
-    height: 27px;
-
-    display: grid;
-    place-items: center;
-
-    border-radius: 50%;
-
-    background: var(--black);
-    color: var(--yellow);
-
-    font-size: 9px;
-    font-weight: 800;
-}
-
-
-/* =========================================================
-   RELAÇÃO COM O TEMA
-========================================================= */
-
-.theme-box {
-    margin-bottom: 14px;
-
-    padding: 20px;
-
-    border-radius: 21px;
-
-    background: var(--cream);
-}
-
-.theme-box .eyebrow {
-    margin-bottom: 8px;
-}
-
-.theme-box p {
-    margin: 0;
-
-    color: #4e4a45;
-
-    font-size: 12px;
-    line-height: 1.55;
-}
-
-
-/* =========================================================
-   CUIDADOS
-========================================================= */
-
-.care-box {
-    margin-bottom: 25px;
-
-    padding: 20px;
-
-    border: 1px solid rgba(17, 16, 15, .1);
-    border-radius: 21px;
-
-    background: var(--white);
-}
-
-.care-box .eyebrow {
-    margin-bottom: 8px;
-}
-
-.care-box p {
-    margin: 0;
-
-    color: var(--gray);
-
-    font-size: 12px;
-    line-height: 1.55;
-}
-
-
-/* =========================================================
-   QR CODE
-========================================================= */
-
-.qr-box {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 18px;
 
-    margin-bottom: 25px;
-    padding: 18px;
-
-    border-radius: 22px;
+    padding: 13px 19px;
 
     background: var(--black);
     color: white;
 }
 
-.qr-box .eyebrow {
-    margin-bottom: 8px;
+.footer strong {
+    display: block;
 
-    color: rgba(255, 255, 255, .5);
+    margin-bottom: 3px;
+
+    font-family: "Playfair Display", Georgia, serif;
+    font-size: 16px;
 }
 
-.qr-box h2 {
-    margin-bottom: 8px;
+.footer span {
+    color: #85817a;
 
-    font-size: 23px;
-    line-height: 1;
+    font-size: 7px;
 }
 
-.qr-box p {
-    max-width: 170px;
-
-    margin: 0;
-
-    color: #aaa;
-
-    font-size: 10px;
-    line-height: 1.4;
-}
-
-.qr-box img {
-    width: 105px;
-    height: 105px;
-
-    flex-shrink: 0;
-
-    padding: 5px;
-
-    border-radius: 8px;
-
-    background: white;
+.footer > a {
+    font-size: 8px;
+    font-weight: 700;
 }
 
 
-/* =========================================================
-   RESPONSIVIDADE
-========================================================= */
-
-/*
-   O site foi pensado primeiro para celular.
-   Em telas maiores, mantemos o "formato celular"
-   centralizado, semelhante à referência.
-*/
+/* =========================
+   TELA DE CELULAR
+========================= */
 
 @media (min-width: 481px) {
-
     body {
         padding: 20px 0;
     }
 
     .app-shell {
-        border-radius: 30px;
-
-        box-shadow:
-            0 20px 60px rgba(0, 0, 0, .15);
+        border-radius: 28px;
+        box-shadow: 0 15px 50px rgba(0, 0, 0, .15);
     }
-
 }
 
 
-/* =========================================================
+/* =========================
    CELULARES PEQUENOS
-========================================================= */
+========================= */
 
-@media (max-width: 390px) {
-
-    .page-pad {
-        padding-left: 18px;
-        padding-right: 18px;
-    }
-
-    .topbar {
-        padding-left: 18px;
-        padding-right: 18px;
-    }
+@media (max-width: 360px) {
 
     .nav {
-        gap: 13px;
-    }
-
-    .nav a {
-        font-size: 10px;
-    }
-
-    .hero h1 {
-        font-size: 51px;
-    }
-
-    .hero p {
-        font-size: 13px;
-    }
-
-    .hero-actions {
-        gap: 15px;
-    }
-
-    .hero-actions .btn {
-        min-width: 165px;
-    }
-
-    .image-card.tall {
-        height: 380px;
-    }
-
-    .info-cards {
-        grid-template-columns: 1fr;
-    }
-
-    .info-card {
-        min-height: 150px;
-    }
-
-    .page-header h1 {
-        font-size: 52px;
-    }
-
-    .science-hero h1 {
-        font-size: 54px;
-    }
-
-    .fact-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .info-strip {
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .info-strip div:last-child {
-        grid-column: span 2;
-    }
-
-    .qr-box {
-        align-items: flex-start;
-    }
-
-    .qr-box img {
-        width: 90px;
-        height: 90px;
-    }
-
-}
-
-
-/* =========================================================
-   CELULAR MUITO PEQUENO
-========================================================= */
-
-@media (max-width: 340px) {
-
-    .nav {
-        gap: 8px;
+        gap: 11px;
     }
 
     .nav a {
         font-size: 9px;
     }
 
-    .brand {
-        font-size: 13px;
+    .page-header h1 {
+        font-size: 45px;
     }
 
-    .hero h1 {
-        font-size: 46px;
+    .menu-card > img {
+        height: 145px;
     }
 
-    .hero-actions {
-        align-items: flex-start;
-        flex-direction: column;
+    .nutrient-list span {
+        font-size: 6.5px;
     }
-
-    .hero-actions .btn {
-        width: 100%;
-    }
-
-    .text-link {
-        margin-left: 5px;
-    }
-
-    .recipe-content h1 {
-        font-size: 46px;
-    }
-
-    .qr-box {
-        flex-direction: column;
-    }
-
-    .qr-box img {
-        width: 120px;
-        height: 120px;
-    }
-
-}
-
-
-/* =========================================================
-   ACESSIBILIDADE
-========================================================= */
-
-a:focus-visible,
-button:focus-visible {
-    outline: 3px solid #222;
-    outline-offset: 3px;
-}
-
-
-/* =========================================================
-   ANIMAÇÕES
-========================================================= */
-
-@keyframes fadeUp {
-
-    from {
-        opacity: 0;
-        transform: translateY(12px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-}
-
-.hero,
-.feature-image,
-.section,
-.menu-list,
-.science-hero,
-.recipe-content {
-    animation: fadeUp .55s ease both;
-}
-
-
-/* =========================================================
-   SCROLLBAR
-========================================================= */
-
-::-webkit-scrollbar {
-    width: 8px;
-}
-
-::-webkit-scrollbar-track {
-    background: #eeeae3;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #aaa49b;
-    border-radius: 20px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #77716a;
 }
