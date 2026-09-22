@@ -3,7 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ácido nucleico</title>
+
+    <title>Ácido nucleico - Home</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
@@ -12,181 +14,51 @@
     <!-- MENU -->
     <header class="menu">
         <nav>
-            <a href="#home">Home</a>
-            <a href="#cardapio">Cardápio</a>
-            <a href="#o-que-sao">O que são</a>
+            <a href="index.html">Home</a>
+            <a href="cardapio.html">Cardápio</a>
+            <a href="o-que-sao.html">O que são</a>
         </nav>
     </header>
 
-    <!-- HOME -->
-    <main id="home">
 
-        <section class="hero">
-            <h1>Ácido<br>nucleico</h1>
+    <!-- PÁGINA PRINCIPAL -->
+    <main>
 
-            <p>
+        <section class="home">
+
+            <h1>
+                Ácido<br>
+                nucleico
+            </h1>
+
+            <p class="intro">
                 Uma macromolécula presente em todas as células vivas,
                 responsável por armazenar, transmitir e traduzir a
                 informação genética.
             </p>
 
+
+            <!-- IMAGEM PRINCIPAL -->
             <img
-                class="hero-img"
+                class="home-image"
                 src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=700&q=85"
                 alt="Imagem relacionada à ciência"
             >
 
-            <a class="hero-button" href="#cardapio">CONHEÇA O<br>CARDÁPIO</a>
-        </section>
 
-        <!-- CARDÁPIO -->
-        <section id="cardapio" class="cardapio">
-            <h2>No<br>Cardápio</h2>
+            <!-- BOTÕES -->
+            <div class="home-buttons">
 
-            <!-- RECEITA 1 -->
-            <article class="card">
-                <img
-                    src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=700&q=85"
-                    alt="Prato saudável"
-                >
+                <a href="cardapio.html">
+                    CONHEÇA O<br>
+                    CARDÁPIO
+                </a>
 
-                <div class="card-content">
-                    <h3>Receita 1</h3>
-                    <p>
-                        Uma opção saudável relacionada ao tema,
-                        preparada para o nosso café da tarde.
-                    </p>
-                </div>
+                <a href="o-que-sao.html">
+                    O QUE SÃO?
+                </a>
 
-                <a class="recipe-button" href="#receita1">RECEITA</a>
-            </article>
-
-            <!-- RECEITA 2 -->
-            <article class="card">
-                <img
-                    src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=700&q=85"
-                    alt="Alimento saudável"
-                >
-
-                <div class="card-content">
-                    <h3>Receita 2</h3>
-                    <p>
-                        Outra opção para complementar o nosso
-                        cardápio de forma equilibrada.
-                    </p>
-                </div>
-
-                <a class="recipe-button" href="#receita2">RECEITA</a>
-            </article>
-
-            <!-- RECEITA 3 -->
-            <article class="card">
-                <img
-                    src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=700&q=85"
-                    alt="Salada saudável"
-                >
-
-                <div class="card-content">
-                    <h3>Receita 3</h3>
-                    <p>
-                        Uma terceira opção saudável para compartilhar
-                        com a sala.
-                    </p>
-                </div>
-
-                <a class="recipe-button" href="#receita3">RECEITA</a>
-            </article>
-        </section>
-
-        <!-- O QUE SÃO -->
-        <section id="o-que-sao" class="info">
-            <h2>O que são?</h2>
-
-            <p>
-                Os ácidos nucleicos são moléculas responsáveis por
-                armazenar e transmitir informações genéticas dos seres vivos.
-            </p>
-
-            <p>
-                Os principais tipos são o DNA e o RNA, que participam
-                de processos importantes para o funcionamento das células.
-            </p>
-        </section>
-
-        <!-- RECEITAS -->
-        <section class="receitas">
-
-            <article id="receita1" class="recipe">
-                <h2>Receita 1</h2>
-
-                <h3>Ingredientes</h3>
-                <ul>
-                    <li>Ingrediente 1</li>
-                    <li>Ingrediente 2</li>
-                    <li>Ingrediente 3</li>
-                </ul>
-
-                <h3>Modo de preparo</h3>
-                <ol>
-                    <li>Prepare os ingredientes.</li>
-                    <li>Misture tudo.</li>
-                    <li>Sirva em seguida.</li>
-                </ol>
-
-                <h3>Informações nutricionais</h3>
-                <p>Calorias: ___ kcal | Proteínas: ___ g</p>
-
-                <h3>Cuidados no consumo</h3>
-                <p>Consumir em quantidade adequada e manter uma alimentação equilibrada.</p>
-            </article>
-
-            <article id="receita2" class="recipe">
-                <h2>Receita 2</h2>
-
-                <h3>Ingredientes</h3>
-                <ul>
-                    <li>Ingrediente 1</li>
-                    <li>Ingrediente 2</li>
-                    <li>Ingrediente 3</li>
-                </ul>
-
-                <h3>Modo de preparo</h3>
-                <ol>
-                    <li>Prepare os ingredientes.</li>
-                    <li>Misture tudo.</li>
-                    <li>Sirva em seguida.</li>
-                </ol>
-
-                <h3>Informações nutricionais</h3>
-                <p>Calorias: ___ kcal | Proteínas: ___ g</p>
-
-                <h3>Cuidados no consumo</h3>
-                <p>Consumir em quantidade adequada e manter uma alimentação equilibrada.</p>
-            </article>
-
-            <article id="receita3" class="recipe">
-                <h2>Receita 3</h2>
-
-                <h3>Ingredientes</h3>
-                <ul>
-                    <li>Ingrediente 1</li>
-                    <li>Ingrediente 2</li>
-                    <li>Ingrediente 3</li>
-                </ul>
-
-                <h3>Modo de preparo</h3>
-                <ol>
-                    <li>Prepare os ingredientes.</li>
-                    <li>Misture tudo.</li>
-                    <li>Sirva em seguida.</li>
-                </ol>
-
-                <h3>Informações nutricionais</h3>
-                <p>Calorias: ___ kcal | Proteínas: ___ g</p>
-
-                <h3>Cuidados no consumo</h3>
-                <p>Consumir em quantidade adequada e manter uma alimentação equilibrada.</p>
-            </article>
+            </div>
 
         </section>
 
@@ -194,4 +66,3 @@
 
 </body>
 </html>
-
