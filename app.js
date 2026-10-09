@@ -428,28 +428,16 @@ document.addEventListener("DOMContentLoaded", () => {
         }
 
 
-        /* =================================================
-           QR CODE
-        ================================================= */
+  document.addEventListener("DOMContentLoaded", function () {
+    const qr = document.querySelector("#recipe-qr");
 
-        const qr =
-            document.querySelector("#recipe-qr");
-
-        if (qr) {
-
-            const currentUrl =
-                window.location.href;
-
-            qr.src =
-                "https://api.qrserver.com/v1/create-qr-code/?size=180x180&data="
-                + encodeURIComponent(currentUrl);
-
-        }
-
-
-        document.title =
-            `${recipe.title} | Núcleo`;
-
+    if (!qr) {
+        return;
     }
 
+    const recipeUrl = window.location.href;
+
+    qr.src =
+        "https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=" +
+        encodeURIComponent(recipeUrl);
 });
